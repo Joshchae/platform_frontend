@@ -1,17 +1,17 @@
 import React from 'react';
 import { Switch, Route } from "react-router-dom";
 
-import About from './components/about/About';
-import Home from './components/home/Home';
+import About from './pages/about/About';
+import Home from './pages/home/Home';
 // import NotFound from './components/NotFound';
 
-import ConflictHome from './components/conflict/ConflictHome';
+import ConflictHome from './pages/conflict/ConflictHome';
 
-import ClimateMigrationHome from './components/climatemigration/ClimateMigrationHome';
-import ClimateMigrationMap from './components/climatemigration/ClimateMigrationMap';
-import ClimateMigrationSubmit from './components/climatemigration/ClimateMigrationSubmit';
-import ClimateMigrationBackground from './components/climatemigration/ClimateMigrationBackground';
-// import ClimateMigrationStory from './components/climatemigration/ClimateMigrationStory';
+import ClimateMigrationHome from './pages/climatemigration/ClimateMigrationHome';
+import ClimateMigrationMap from './pages/climatemigration/ClimateMigrationMap';
+import ClimateMigrationSubmit from './pages/climatemigration/ClimateMigrationSubmit';
+import ClimateMigrationBackground from './pages/climatemigration/ClimateMigrationBackground';
+// import ClimateMigrationStory from './pages/climatemigration/ClimateMigrationStory';
 
 import './App.css';
 import './index.css';
