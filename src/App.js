@@ -10,13 +10,33 @@ import ConflictHome from './pages/conflict/ConflictHome';
 import ClimateMigrationHome from './pages/climatemigration/ClimateMigrationHome';
 import ClimateMigrationMap from './pages/climatemigration/ClimateMigrationMap';
 import ClimateMigrationSubmit from './pages/climatemigration/ClimateMigrationSubmit';
-import ClimateMigrationBackground from './pages/climatemigration/ClimateMigrationBackground';
+import ClimateMigrationFacts from './pages/climatemigration/ClimateMigrationFacts';
 // import ClimateMigrationStory from './pages/climatemigration/ClimateMigrationStory';
 
 import './App.css';
 import './index.css';
 import Header from './components/Header';
 
+
+
+
+//++++++++++++FETCH BACKEND API+++++++++++++++++
+
+/*useEffect(() => {
+  fetch("/api/?")
+    .then((res) => res.json ())
+    .then((data) => set?(data))
+    .catch((error) => console.log(error.message));
+}, []);
+OR 
+const fetchData = async () => {
+    await Axios.get(`HEROKU LINK/${name}`)
+      .then((response) => setData(response.data.data))
+      .catch((error) => console.log(error));
+};*/
+
+
+//++++++++++++ Routes ++++++++++++++++++++++
 function App() {
   return (
     <div className="App">
@@ -31,8 +51,8 @@ function App() {
           </Route>
 
         {/* Climate Migration */}
-          <Route path="/ClimateMigration/Background">
-            <ClimateMigrationBackground />
+          <Route path="/ClimateMigration/Facts">
+            <ClimateMigrationFacts />
           </Route>
           <Route path="/ClimateMigration/Map">
             <ClimateMigrationMap />
