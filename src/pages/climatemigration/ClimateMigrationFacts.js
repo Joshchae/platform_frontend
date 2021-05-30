@@ -1,40 +1,26 @@
 //On this page fact cards shall be displayed
-import React from 'react'
 import './ClimateMigration.css'
+import React, {useState, Fragment} from "react";
+import Button from "@material-ui/core/Button";
+import { useHistory } from "react-router-dom";
+import { makeStyles } from "@material-ui/core/styles";
+import Grid from "@material-ui/core/Grid";
+import Pagination from '@material-ui/lab/Pagination';
+
+import AnimatedFactCards from "../components/AnimatedFactCards";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
 
 
-function ClimateMigrationFacts() {
-    return (
-        <div>
-            Background Introductory<br />
-        </div>
-    )
-}
+//----- pop up ----
 
-export default ClimateMigrationFacts
-
-
-// import React, {useState, Fragment} from "react";
-// import Button from "@material-ui/core/Button";
-// import { useHistory } from "react-router-dom";
-// import { makeStyles } from "@material-ui/core/styles";
-// import Grid from "@material-ui/core/Grid";
-// import Pagination from '@material-ui/lab/Pagination';
-
-// import AnimatedCardResults from "../components/animatedCardResults";
-// import NavBar from "../components/navBar";
-// import Footer from "../components/footer";
-
-// //----- pop up ----
-
-// import Dialog from "@material-ui/core/Dialog";
-// import DialogActions from "@material-ui/core/DialogActions";
-// import DialogContent from "@material-ui/core/DialogContent";
-// import DialogContentText from "@material-ui/core/DialogContentText";
-// import DialogTitle from "@material-ui/core/DialogTitle";
-// import useMediaQuery from "@material-ui/core/useMediaQuery";
-// import { useTheme } from "@material-ui/core/styles";
-
+import Dialog from "@material-ui/core/Dialog";
+import DialogActions from "@material-ui/core/DialogActions";
+import DialogContent from "@material-ui/core/DialogContent";
+import DialogContentText from "@material-ui/core/DialogContentText";
+import DialogTitle from "@material-ui/core/DialogTitle";
+import useMediaQuery from "@material-ui/core/useMediaQuery";
+import { useTheme } from "@material-ui/core/styles";
 
 
 // const useStyles = makeStyles({
@@ -54,6 +40,17 @@ export default ClimateMigrationFacts
 //     height: "100%",
 //   }
 // });
+
+
+function ClimateMigrationFacts() {
+    const [selectedFact, setSelectedFact] = useState(null);
+  
+    return (
+        <div>
+            Background Introductory<br />
+        </div>
+    )
+}
 
 // const ResultsPage = ({
 //   scientistQuestions,
@@ -188,12 +185,7 @@ export default ClimateMigrationFacts
 //   );
 // };
 
-// export default ResultsPage;
 
-// /* <Paginations scientistQuestions={scientistQuestions.length} paginate={paginate} scientistsPerPage={scientistsPerPage}   /> */
-// //<Pagination count={Math.floor(scientistQuestions.length / 10)} onChange={(e, page) => setPage(page)} />
+export default ClimateMigrationFacts
 
-// // container
-// //   direction="row"
-// //   justify="center"
-// //   alignItems="center"
+

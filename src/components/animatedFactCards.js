@@ -1,7 +1,6 @@
 import React from "react";
-import { useSpring, animated } from "react-spring";
+import { useSpring, animated } from "@react-spring/web";
 import { makeStyles } from "@material-ui/core/styles";
-
 import Grid from "@material-ui/core/Grid";
 import Card from "@material-ui/core/Card";
 
@@ -57,14 +56,12 @@ const AnimatedFactCards = ({ sq, setOpen, open, scientistQuestions }) => {
             <img
               className={classes.media}
               src={sq.picture}
-              alt="scientist woman working"
+              alt="symbol pic climate migration"
             />
-            <h2>
-              {sq.first_name} {sq.last_name} 
-            </h2>
-            <h3> {sq.area_expertise} </h3>
-            
-            click me
+            <h3>
+
+            </h3>
+            Click here
           </Card>
         </animated.div>
       </Grid>
