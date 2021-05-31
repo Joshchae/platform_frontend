@@ -19,7 +19,6 @@ import Header from './components/Header';
 
 
 
-
 //++++++++++++FETCH BACKEND API+++++++++++++++++
 
 /*useEffect(() => {
@@ -51,18 +50,18 @@ function App() {
           </Route>
 
         {/* Climate Migration */}
-          <Route path="/ClimateMigration/Facts">
-            <ClimateMigrationFacts />
-          </Route>
           <Route path="/ClimateMigration/Map">
             <ClimateMigrationMap />
           </Route>
-          {/* <Route path="/ClimateMigration/Map/stories/:id">
-            <ClimateMigrationStory /> 
-          </Route> */}00v
-          <Route path="/ClimateMigration/Map/stories/submit">
+          <Route path="/ClimateMigration/submit">
             <ClimateMigrationSubmit />
           </Route>
+          <Route path="/ClimateMigration/Facts">
+            <ClimateMigrationFacts />
+          </Route>
+          {/* <Route path="/ClimateMigration/Map/stories/:id">
+            <ClimateMigrationStory /> 
+          </Route> */}
           <Route path="/ClimateMigration">
             <ClimateMigrationHome />
           </Route>

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { json } from 'd3';
 import { topojson } from 'topojson-client';
 
-const jsonUrl = 'https://ucdpapi.pcr.uu.se/api/gedevents/20.1?pagesize=1&page=295'
+const jsonUrl = 'https://ucdpapi.pcr.uu.se/api/gedevents/20.1?pagesize=100&page=1'
 
 const row = d => {
     // d.result = + d.best;
