@@ -18,23 +18,6 @@ import './index.css';
 import Header from './components/Header';
 
 
-
-//++++++++++++FETCH BACKEND API+++++++++++++++++
-
-/*useEffect(() => {
-  fetch("/api/?")
-    .then((res) => res.json ())
-    .then((data) => set?(data))
-    .catch((error) => console.log(error.message));
-}, []);
-OR 
-const fetchData = async () => {
-    await Axios.get(`HEROKU LINK/${name}`)
-      .then((response) => setData(response.data.data))
-      .catch((error) => console.log(error));
-};*/
-
-
 //++++++++++++ Routes ++++++++++++++++++++++
 function App() {
   return (
