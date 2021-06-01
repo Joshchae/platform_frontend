@@ -1,3 +1,9 @@
+/* body {
+    margin: 0;
+    overflow: hidden;
+    font-family: 'Poppins', sans-serif;
+  } */
+
 pre {
     font-size: 7em;
 }
@@ -16,3 +22,7 @@ pre {
     stroke: #ececec;
 }
 
+circle {
+  fill: #137B80;
+  opacity: 0.3;
+}
