@@ -3,14 +3,13 @@ import ReactMapGL, { Marker, Popup } from 'react-map-gl';
 import './ClimateMigration.css'
 // import * as cityData from '../../custom.geo.json';
 import * as parkData from '../../data/skateboard-parks.json';
-// import {SkateboardLogo} from './skateboarding.svg';
 
 function ClimateMigrationMap() {
     const [viewport, setViewport] = useState({
         latitude: 45.4211,
         longitude: -75.6903,
-        width: '100vw',
-        height: '100vh',
+        width: '80vw',
+        height: '80vh',
         zoom: 5
       });
      const [selectedPark, setSelectedPark] = useState(null);
@@ -27,6 +26,18 @@ function ClimateMigrationMap() {
         window.removeEventListener('keydown', listener);
       };
     }, []);
+
+    const [locationData, setLocationData] = useState([]);
+  
+    useEffect(() => {
+        fetch('http://localhost:5000/locations/')
+        .then(res => res.json())
+        .then((json) => {
+          setLocationData(json.data.data);
+          console.log(json.data)
+        })
+        .catch(console.log('request failed, useApi'));
+      }, [])
 
       return (
         <div>

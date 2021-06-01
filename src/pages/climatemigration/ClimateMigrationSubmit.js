@@ -63,3 +63,27 @@ const {handleChange, handleSubmit, values} = ClimateMigrationUseForm()
 }
 
 export default ClimateMigrationSubmit
+
+
+/*
+const handleSubmit=(e)=> {
+    e.preventDefault();
+    // const postUrl = 'http://localhost:5000/users';
+    const postUrl = 'https://blooming-lowlands-37264.herokuapp.com';
+    fetch(postUrl, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+            name: this.name,
+            height: this.height,
+            strength: this.strength,
+            age: this.age,
+            iq: this.iq,
+            funnyness: this.funnyness
+        })
+    })
+    .then(()=>{
+        alert('Completed!');
+    })
+}
+*/
