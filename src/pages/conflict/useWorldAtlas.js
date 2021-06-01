@@ -1,13 +1,4 @@
-
-/*
 // import React, { useState, useEffect } from 'react';
-
-
-
-
-
-
-
 // import { json } from 'd3';
 // import { feature, mesh } from 'topojson-client';
 
@@ -21,11 +12,12 @@
 //             const { countries, land } = topology.objects;
 //             setData({
 //                 countries: feature(topology, countries),
-//                 interiors: mesh(topology, countries, (a, b) => a !==b)
+//                 interior: mesh(topology, countries, (a, b) => a !==b)
 //             });
 //         });
 //     }, []);
 
 //     return data;
 // };
-*/
+
+

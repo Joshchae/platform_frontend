@@ -75,6 +75,7 @@ const getDeaths = (obj) => {
 //     const [data, useData] = useState(null);
 
 //     // const jsonUrl = () => {
+
 // const [country, setCountry] = useState([]);
 // const [isLoading, setIsLoading] = useState(true);
 

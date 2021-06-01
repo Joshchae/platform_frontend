@@ -1,8 +1,19 @@
+@import url("https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200&display=swap");
+
+/* <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200&display=swap" rel="stylesheet"> */
+
 .App {
+  background-size: cover;
+  background-position: absolute;
+  align-items: center;
   text-align: center;
+  font-family: "Titillium Web", sans-serif;
+  height: 100vh;
+  width: 100wh;
 }
 
-.App-logo {
+/* .App-logo {
   height: 40vmin;
   pointer-events: none;
 }
@@ -35,4 +46,4 @@
   to {
     transform: rotate(360deg);
   }
-}
+} */

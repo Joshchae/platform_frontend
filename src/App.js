@@ -11,13 +11,15 @@ import ConflictHome2 from './pages/conflict/ConflictHome2';
 import ClimateMigrationHome from './pages/climatemigration/ClimateMigrationHome';
 import ClimateMigrationMap from './pages/climatemigration/ClimateMigrationMap';
 import ClimateMigrationSubmit from './pages/climatemigration/ClimateMigrationSubmit';
-import ClimateMigrationBackground from './pages/climatemigration/ClimateMigrationBackground';
+import ClimateMigrationFacts from './pages/climatemigration/ClimateMigrationFacts';
 // import ClimateMigrationStory from './pages/climatemigration/ClimateMigrationStory';
 
 import './App.css';
 import './index.css';
 import Header from './components/Header';
 
+
+//++++++++++++ Routes ++++++++++++++++++++++
 function App() {
   return (
     <div className="App">
@@ -32,18 +34,18 @@ function App() {
           </Route>
 
         {/* Climate Migration */}
-          <Route path="/ClimateMigration/Background">
-            <ClimateMigrationBackground />
-          </Route>
           <Route path="/ClimateMigration/Map">
             <ClimateMigrationMap />
           </Route>
-          {/* <Route path="/ClimateMigration/Map/stories/:id">
-            <ClimateMigrationStory /> 
-          </Route> */}00v
-          <Route path="/ClimateMigration/Map/stories/submit">
+          <Route path="/ClimateMigration/submit">
             <ClimateMigrationSubmit />
           </Route>
+          <Route path="/ClimateMigration/Facts">
+            <ClimateMigrationFacts />
+          </Route>
+          {/* <Route path="/ClimateMigration/Map/stories/:id">
+            <ClimateMigrationStory /> 
+          </Route> */}
           <Route path="/ClimateMigration">
             <ClimateMigrationHome />
           </Route>

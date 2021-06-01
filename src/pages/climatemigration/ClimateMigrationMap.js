@@ -3,18 +3,19 @@ import ReactMapGL, { Marker, Popup } from 'react-map-gl';
 import './ClimateMigration.css'
 // import * as cityData from '../../custom.geo.json';
 import * as parkData from '../../data/skateboard-parks.json';
-// import {SkateboardLogo} from './skateboarding.svg';
 
 function ClimateMigrationMap() {
     const [viewport, setViewport] = useState({
         latitude: 45.4211,
         longitude: -75.6903,
-        width: '100vw',
-        height: '100vh',
+        width: '80vw',
+        height: '80vh',
         zoom: 5
       });
      const [selectedPark, setSelectedPark] = useState(null);
+     const [selectedLocation, setSelectedLocation] = useState(null);
     
+     /* fetch Data from MongoDB, localhost*/
      useEffect(() => {
       const listener = e => {
         if (e.key === 'Escape') {
@@ -28,6 +29,18 @@ function ClimateMigrationMap() {
       };
     }, []);
 
+    const [locationData, setLocationData] = useState([]);
+  
+    useEffect(() => {
+        fetch('http://localhost:5000/locations/')
+        .then(res => res.json())
+        .then((json) => {
+          setLocationData(json.data);
+          console.log(json.data)
+        })
+        .catch(console.log('request failed, useApi'));
+      }, [])
+
       return (
         <div>
             <ReactMapGL
@@ -36,35 +49,30 @@ function ClimateMigrationMap() {
             mapStyle='mapbox://styles/zuzuc/ckp5g7i5g04yy17l8viaxmxgi'
             onViewportChange={(viewport) => setViewport(viewport)}>
         
-            {parkData.features.map((park)=> (
-              <Marker key={park.properties.PARK_ID}
-                latitude={park.geometry.coordinates[1]}
-                longitude={park.geometry.coordinates[0]} >
+            {locationData.map((loc) => (
+              <Marker key={loc.id} longitude={loc.longitude} latitude={loc.latitude} >
                 <div>
-                  <button className="marker-btn"
-                    onClick={e => {
-                    e.preventDefault();
-                    setSelectedPark(park);
-                  }}>
-                    <img src="../../data/globe.png" width="10" alt="Skate Park Icon" />
+                  <button className="marker-btn" onClick={e => {e.preventDefault(); setSelectedLocation(loc)}}>
+                    <img src="../../data/globe.png" width="10" alt="Location Icon" />
                   </button>
                 </div>
               </Marker>
             ))}
-            
-            {selectedPark ? (
+
+            {/*
+            {selectedLocation ? (
               <Popup
-                latitude={selectedPark.geometry.coordinates[1]}
-                longitude={selectedPark.geometry.coordinates[0]} 
+                latitude={loc.latitude}
+                longitude={loc.longitude} 
                 onClose={() => {
-                  setSelectedPark(null);
+                  setSelectedLocation(null);
                }}>
                 <div>
-                  <h2>{selectedPark.properties?.NAME}</h2>
-                  <p>{selectedPark.properties?.DESCRIPTIO}</p>
+                  <h2>{selectedLocation.properties?.NAME}</h2>
+                  <p>{selectedLocation.properties?.DESCRIPTIO}</p>
                 </div>
               </Popup>
-            ) : null}
+            ) : null} */}
 
             </ReactMapGL>
         </div>
