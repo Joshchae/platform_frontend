@@ -11,11 +11,12 @@ export const useWorldAtlas = () => {
         json(jsonUrl).then(topology => {
             const { countries, land } = topology.objects;
             setData({
-                // countries: feature(topology, countries),
-                countries: mesh(topology, countries, (a, b) => a !==b)
+                countries: feature(topology, countries),
+                interior: mesh(topology, countries, (a, b) => a !==b)
             });
         });
     }, []);
 
     return data;
 };
+

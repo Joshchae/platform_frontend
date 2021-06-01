@@ -8,6 +8,7 @@ const row = d => {
     // d.result = + d.best;
     return d;
 }
+
 export const useData = () => {
     const [data, setData] = useState([]);
 
@@ -16,7 +17,6 @@ export const useData = () => {
     }, []);
     return {data, setData}
 };
-
 
 
 // export const useUCDP = () => {
