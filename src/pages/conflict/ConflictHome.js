@@ -1,15 +1,16 @@
 import React, { useState } from 'react';
 // import ReactMapGL from 'react-map-gl';
-import { schemeYlOrRd, scaleSequential, max} from 'd3';
+import { interpolateYlOrRd, scaleSequential, max} from 'd3';
 import { useWorldAtlas } from './useWorldAtlas';
-import { Marks } from './Marks'
-import './Conflict.css'
+import { Marks } from './Marks';
+import './Conflict.css';
 import { useData } from './useData';
+
 
 
 const width = 960;
 const height = 500;
-const selectedDate = 2017;
+const selectedDate = 1989;
 const ConflictHome = () => {
     const worldAtlas = useWorldAtlas();
     const {data} = useData();
@@ -17,12 +18,19 @@ const ConflictHome = () => {
     if (!worldAtlas || !data) {
         <pre>Loading...</pre>;
     }
-    console.log(data)
-    const filteredData = data.filter(d => d.date_end === selectedDate);
+    // console.log(data)
+    const filteredData = data.filter(d => d.year === selectedDate);
     // console.log(filteredData);
+    const rowByCountry = new Map();
+    filteredData.forEach(d => {
+        rowByCountry.set(d.country_id, d);
+    });
+    
+    
     const colorValue = d => d.Result;
+    // console.log(colorValue)
 
-    const colorScale = scaleSequential(schemeYlOrRd).domain([0, max(data, colorValue)])
+    const colorScale = scaleSequential(interpolateYlOrRd).domain([0, max(data, colorValue)])
 
 
     return (
@@ -30,7 +38,7 @@ const ConflictHome = () => {
         <svg width={width} height={height}>
             <Marks //coords insert
               worldAtlas={worldAtlas}
-              data={data}
+              rowByCountry={rowByCountry} //   data={data}
               colorScale={colorScale}
               colorValue={colorValue}
             />

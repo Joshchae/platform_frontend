@@ -6,6 +6,7 @@ import Home from './pages/home/Home';
 // import NotFound from './components/NotFound';
 
 import ConflictHome from './pages/conflict/ConflictHome';
+import ConflictHome2 from './pages/conflict/ConflictHome2';
 
 import ClimateMigrationHome from './pages/climatemigration/ClimateMigrationHome';
 import ClimateMigrationMap from './pages/climatemigration/ClimateMigrationMap';
@@ -49,6 +50,9 @@ function App() {
             <ClimateMigrationHome />
           </Route>
         {/* Conflicts */}
+        <Route path="/Conflicts2">
+            <ConflictHome2 />
+          </Route>
           <Route path="/Conflicts">
             <ConflictHome />
           </Route>
