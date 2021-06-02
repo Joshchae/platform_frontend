@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import ReactMapGL, { Marker, Popup, NavigationControl } from 'react-map-gl';
+import axios from 'axios'
+// import {FaMapMarkerAlt} from 'react-icons/fa';
+import { GiPositionMarker } from 'react-icons/gi';
 import './ClimateMigration.css';
 
 const navControlStyle={
@@ -9,8 +12,8 @@ const navControlStyle={
 
 function ClimateMigrationMap() {
     const [viewport, setViewport] = useState({
-        longitude: -122.45, 
-        latitude: 37.78,
+        longitude: 169.1264892, 
+        latitude: 17.9815443,
         width: '100vw',
         height: '100vh',
         zoom: 1.5
@@ -18,7 +21,7 @@ function ClimateMigrationMap() {
 
      const [postData, setPostData] = useState([]);
      const [selectedPost, setSelectedPost] = useState(null);
-    
+        
      /* fetch Data from MongoDB, localhost*/
      useEffect(() => {
       const listener = e => {
@@ -33,17 +36,21 @@ function ClimateMigrationMap() {
       };
     }, []);
 
-  
+    const fetchData = async () => {
+      try {
+        const posts = await axios.get('http://localhost:5000/posts')
+          console.log('posts', posts.data.data);
+          setPostData(posts.data.data);
+      } catch (err) {
+        console.log('error fetching /posts', err)
+      }
+    };
+              
     useEffect(() => {
-        fetch('http://localhost:5000/posts/')
-        .then(res => res.json())
-        .then((json) => {
-          setPostData(json.data);
-          console.log(json.data)
-        })
-        .catch(console.log('request failed, useApi'));
-      }, [])
-
+      fetchData()
+    }, [])
+                
+                
       return (
         <div>
             <ReactMapGL
@@ -54,10 +61,10 @@ function ClimateMigrationMap() {
             <NavigationControl style={navControlStyle} />
         
             {postData.map((post) => (
-              <Marker key={post.id} longitude={post.location.longitude} latitude={post.location.latitude} >
+              <Marker key={post.id} longitude={post.location.longitude} latitude={post.location.latitude} offsetLeft={-20} offsetTop={-10}>
                 <div>
                   <button className="marker-btn" onClick={e => {e.preventDefault(); setSelectedPost(post)}}>
-                    <img src="../../data/globe.png" width="10" alt="You are here" />
+                    <GiPositionMarker />Click here
                   </button>
                 </div>
               </Marker>
@@ -65,18 +72,18 @@ function ClimateMigrationMap() {
 
             {selectedPost ? (
               <Popup
-                latitude={selectedPost.location.latitude}
-                longitude={selectedPost.location.longitude} 
-                onClose={() => {
-                  setSelectedPost(null);
-               }}>
+              latitude={selectedPost.location.latitude}
+              longitude={selectedPost.location.longitude} 
+              onClose={() => {
+                setSelectedPost(null);}}>
                 <div>
                   <h2>{selectedPost.title}</h2>
                   <h3>{selectedPost.region}</h3>
                   <h4>{selectedPost.country}</h4>
                   <h5>{selectedPost.locationName}</h5>
-                  <p>{selectedPost.story}</p>
-                  <img src={selectedPost.image} width="50"alt={selectedPost.title} />
+                  <p>{selectedPost.story.substr(0,25)}...</p>
+                  <button>Explore more</button><br />
+                  <img src={selectedPost.image} width="300" alt={selectedPost.title} />
                 </div>
               </Popup>
             ) : null}
@@ -84,6 +91,17 @@ function ClimateMigrationMap() {
             </ReactMapGL>
         </div>
       );
-}
-
-export default ClimateMigrationMap
+    }
+    
+    export default ClimateMigrationMap
+    
+    // fetching data, working version
+      // useEffect(() => {
+      //     fetch('http://localhost:5000/posts/')
+      //     .then(res => res.json())
+      //     .then((json) => {
+      //       setPostData(json.data);
+      //       console.log(json.data)
+      //     })
+      //     .catch(console.log('request failed, useApi'));
+      //   }, [])
