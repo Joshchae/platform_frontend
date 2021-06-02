@@ -1,14 +1,19 @@
 import React, { useState, useEffect } from 'react'
-import ReactMapGL, { Marker, Popup } from 'react-map-gl';
+import ReactMapGL, { Marker, Popup, NavigationControl } from 'react-map-gl';
 import './ClimateMigration.css'
+
+const navControlStyle={
+  right: 10,
+  top: 10
+};
 
 function ClimateMigrationMap() {
     const [viewport, setViewport] = useState({
-        latitude: 45.4211,
-        longitude: -75.6903,
-        width: '80vw',
-        height: '80vh',
-        zoom: 5
+        longitude: -122.45, 
+        latitude: 37.78,
+        width: '100vw',
+        height: '100vh',
+        zoom: 1.5
       });
 
      const [postData, setPostData] = useState([]);
@@ -46,6 +51,7 @@ function ClimateMigrationMap() {
             mapboxApiAccessToken={process.env.REACT_APP_MAPBOX_TOKEN}
             mapStyle='mapbox://styles/zuzuc/ckp5g7i5g04yy17l8viaxmxgi'
             onViewportChange={(viewport) => setViewport(viewport)}>
+            <NavigationControl style={navControlStyle} />
         
             {postData.map((post) => (
               <Marker key={post.id} longitude={post.location.longitude} latitude={post.location.latitude} >
