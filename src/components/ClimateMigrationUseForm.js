@@ -4,7 +4,6 @@ function ClimateMigrationUseForm() {
     const [values, setValues] = useState({
         region: '',
         country: '',
-        city: '',
         location: '',
         title: '',
         story: '',
