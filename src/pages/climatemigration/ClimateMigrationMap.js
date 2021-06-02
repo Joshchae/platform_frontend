@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import ReactMapGL, { Marker, Popup, NavigationControl } from 'react-map-gl';
-import './ClimateMigration.css'
+import './ClimateMigration.css';
 
 const navControlStyle={
   right: 10,
@@ -57,7 +57,7 @@ function ClimateMigrationMap() {
               <Marker key={post.id} longitude={post.location.longitude} latitude={post.location.latitude} >
                 <div>
                   <button className="marker-btn" onClick={e => {e.preventDefault(); setSelectedPost(post)}}>
-                    <img src="../../data/globe.png" width="10" alt="Location Icon" />
+                    <img src="../../data/globe.png" width="10" alt="You are here" />
                   </button>
                 </div>
               </Marker>
