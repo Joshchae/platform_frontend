@@ -8,8 +8,9 @@ import {
   Graticule
 } from "react-simple-maps";
 
-const geoUrl =
-  "https://raw.githubusercontent.com/zcreativelabs/react-simple-maps/master/topojson-maps/world-110m.json";
+// const geoUrl =
+//   "https://raw.githubusercontent.com/zcreativelabs/react-simple-maps/master/topojson-maps/world-110m.json";
+const geoUrl = './world-110m.json'
 
 const group = (objectArray, property) => {
   return objectArray.reduce((acc, obj) => {
