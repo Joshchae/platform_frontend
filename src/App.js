@@ -50,7 +50,7 @@ function App() {
             <ClimateMigrationHome />
           </Route>
         {/* Conflicts */}
-        <Route path="/Conflicts2">
+          <Route path="/Conflicts2">
             <ConflictHome2 />
           </Route>
           <Route path="/Conflicts">
