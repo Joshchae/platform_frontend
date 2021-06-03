@@ -2,7 +2,7 @@ import React from 'react'
 import './ClimateMigration.css'
 import ClimateMigrationUseForm from '../../components/ClimateMigrationUseForm'
 
-function ClimateMigrationSubmit() {
+function ClimateMigrationSubmit({toggleSubmit}) {
 const {handleChange, handleSubmit, values} = ClimateMigrationUseForm()
 
     return (
@@ -56,7 +56,7 @@ const {handleChange, handleSubmit, values} = ClimateMigrationUseForm()
                     <label htmlFor="nickname">Nickname</label>
                     <input id="nickname" type="text" name="nickname" placeholder="Write down your nickname" value={values.nickname} onChange={handleChange}/>
                 </div>
-                <button type="submit" onSubmit={handleSubmit}>Submit</button>
+                <button type="submit" onSubmit={handleSubmit} onClick={toggleSubmit}>Submit</button>
             </form>
         </div>
     )

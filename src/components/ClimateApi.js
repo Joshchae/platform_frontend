@@ -1,10 +1,23 @@
-// import { useState, useEffect } from 'react'
-// // import axios from 'axios'
+import { useState, useEffect } from 'react'
+import axios from 'axios'
 
-// //++++++++++++FETCH BACKEND API+++++++++++++++++
-// function ClimateApi() {
-  
-//       return {locationData}
-// }
-// export default ClimateApi
+function ClimateApi () {
+    const [postData, setPostData] = useState([]);
+    const fetchData = async () => {
+        try {
+            const posts = await axios.get('http://localhost:5000/posts')
+              console.log('posts', posts.data.data);
+              setPostData(posts.data.data);
+        } catch (err) {
+              console.log('error fetching /posts', err)
+        }
+    };
+    
+    useEffect(() => {
+        fetchData()
+    }, [])
+    return postData
+}
+
+export default ClimateApi
 
