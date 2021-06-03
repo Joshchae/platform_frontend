@@ -3,14 +3,29 @@
 /* <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200&display=swap" rel="stylesheet"> */
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* #69b7eb */
+/* #9fdfbe  */
+
 .App {
+  background: linear-gradient(90deg, #b3dbd3, #faf1e8);
   background-size: cover;
   background-position: absolute;
   align-items: center;
   text-align: center;
+  position: relative;
+  /* margin: auto;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; */
   font-family: "Titillium Web", sans-serif;
   height: 100vh;
-  width: 100wh;
+  width: 100vw;
 }
 
 /* .App-logo {
