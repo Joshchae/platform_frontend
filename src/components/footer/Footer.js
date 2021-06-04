@@ -4,6 +4,7 @@ import Disclaimer from '../../pages/disclaimer/Disclaimer';
 import { CgCopyright } from 'react-icons/cg';
 
 function Footer() {
+    const iconStyles = { color: '#00303f', fontSize: "1em" };
     return (
         <div className='footer'>
             <div className='footer-column'>
@@ -12,7 +13,7 @@ function Footer() {
                     <Disclaimer />Disclaimer
                     </div>
                     <div className='copyright'>
-                        <p><CgCopyright /> 2021 Made with ❤️ by Josh, Franzi, Joldon </p>
+                        <p><CgCopyright style={iconStyles} /> 2021 Made with ❤️ by Josh, Franzi, Joldon </p>
                     </div>
                 </div>
             </div>
