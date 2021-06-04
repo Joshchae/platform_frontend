@@ -8,9 +8,13 @@ import {
   Graticule
 } from "react-simple-maps";
 
-// const geoUrl =
-//   "https://raw.githubusercontent.com/zcreativelabs/react-simple-maps/master/topojson-maps/world-110m.json";
-const geoUrl = './world-110m.json'
+
+// const width = '960vw';
+// const height = '500vh';
+
+const geoUrl =
+  "https://raw.githubusercontent.com/zcreativelabs/react-simple-maps/master/topojson-maps/world-110m.json";
+
 
 const group = (objectArray, property) => {
   return objectArray.reduce((acc, obj) => {
@@ -43,17 +47,15 @@ const MapChart = ({ setTooltipContent }) => {
   const colorScale = scaleLinear()
     .domain([0, maxConflicts])
     .range(["#ffedea", "#ff5233"]);
-
+  // "https://ucdpapi.pcr.uu.se/api/gedevents/20.1?pagesize=1000"
   const fetchConflicts = async () => {
-    const res = await fetch(
-      "https://ucdpapi.pcr.uu.se/api/gedevents/20.1?pagesize=1000"
-    );
+    const res = await fetch('./ucdp.json');
     const json = await res.json();
     const data = json.Result.map((item) => ({
       ...item,
       countryCode: item.relid.substring(0, 3)
     }));
-
+    
     const groupedData = group(data, "countryCode");
     const maxConflicts = Object.keys(groupedData).reduce((max, country) =>
       max > groupedData[country].conflicts
@@ -69,13 +71,23 @@ const MapChart = ({ setTooltipContent }) => {
     fetchConflicts();
   }, []);
 
+// "https://ucdpapi.pcr.uu.se/api/gedevents/20.1?StartDate=2000-01-01&EndDate=2007-10-12"
+/*
+  filter UI - dropdown // select - option : StartDate, EndDate, TypeOfViolence 
+  pass // const firstFiltered = `${filteredUrl}`/{option}={Date}
+  2nd filter // ...firstFiltered,
+                &{option}={Date}
+             >> `${filteredUrl}`/{option}={Date}&{option}={Date} >> StartDate=2000-01-01&EndDate=2007-10-12
+
+             const [filtered, setFiltered] = useState(''); 
+*/
+
   return (
     <ComposableMap
-      projectionConfig={{
-        rotate: [-10, 0, 0],
-        scale: 147
-      }}
+      projectionConfig={{ rotate: [-10, 0, 0], scale: 147 }}
       data-tip=""
+      width={1000}
+      height={700}
     >
       <Sphere stroke="#E4E5E6" strokeWidth={0.5} />
       <Graticule stroke="#E4E5E6" strokeWidth={0.5} />
@@ -93,7 +105,7 @@ const MapChart = ({ setTooltipContent }) => {
                   const { NAME } = geo.properties;
 
                   try {
-                    setTooltipContent(`${NAME} — ${d.conflicts || 0}`);
+                    setTooltipContent(`${NAME} — conflicts: ${d.conflicts || 0} & fatalities: ${d.fatalities || 0}`);
                   } catch {
                     setTooltipContent("");
                   }
