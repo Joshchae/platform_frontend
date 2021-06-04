@@ -2,7 +2,7 @@ import React from 'react'
 import { Nav, Navbar, NavDropdown } from 'react-bootstrap';
 import './Header.css';
 import "../../scss/custom.scss";
-import logo from '../../img/logo_mapstories.png';
+import logo from '../../img/logo_mapstories_round_scandi.png';
 
 
 function Header() {
