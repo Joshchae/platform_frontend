@@ -31,7 +31,7 @@ function App() {
      <Header />
      <main> 
       <Switch>
-        <Route exact path="/" >
+        <Route exact path="/" component={Home} >
           <Home />
           {/* <Route component={Home} path="/home" /> */}
         </Route>

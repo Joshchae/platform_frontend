@@ -1,16 +1,14 @@
 .footer {
   background-size: cover;
+  min-height: 1.25rem;
   width: 100%;
-  min-width: 35rem;
-  min-height: 2rem;
-  max-height: 4rem;
+  position: absolute;
+  bottom: 0;
   background-color: transparent;
   /* background-color: #00303f; */
   /* opacity: 0.5; */
   /* color: #f5f4f4; */
   color: #00303f;
-  position: absolute;
-  bottom: 0;
 }
 
 /* .footer-column {
