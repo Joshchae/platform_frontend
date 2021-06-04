@@ -13,6 +13,7 @@ import ClimateMigrationMap from './pages/climatemigration/ClimateMigrationMap';
 import ClimateMigrationSubmit from './pages/climatemigration/ClimateMigrationSubmit';
 import ClimateMigrationFacts from './pages/climatemigration/ClimateMigrationFacts';
 // import ClimateMigrationStory from './pages/climatemigration/ClimateMigrationStory';
+import ClimateMigrationAdmin from './pages/climatemigration/ClimateMigrationAdmin';
 
 import './App.css';
 import './index.css';
@@ -42,6 +43,9 @@ function App() {
           </Route>
           <Route path="/ClimateMigration/Facts">
             <ClimateMigrationFacts />
+          </Route>
+          <Route path="/ClimateMigration/Admin13">
+            <ClimateMigrationAdmin />
           </Route>
           {/* <Route path="/ClimateMigration/Map/stories/:id">
             <ClimateMigrationStory /> 
