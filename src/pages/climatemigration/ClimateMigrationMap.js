@@ -16,8 +16,8 @@ function ClimateMigrationMap() {
     const [toggleStory, setToggleStory] = useState(false)
 
     const toggleStoryBtn = () => { setToggleStory(!toggleStory) }
-      
-    useEffect(() => {
+
+  useEffect(() => {
       const listener = e => {
         if (e.key === 'Escape') {
           setSelectedPost(null);
@@ -45,11 +45,12 @@ function ClimateMigrationMap() {
     // }, [])
 
       return (
-        <div>
+        <div className='map'>
             <ReactMapGL
             {...viewport}
             mapboxApiAccessToken={process.env.REACT_APP_MAPBOX_TOKEN}
-            mapStyle='mapbox://styles/zuzuc/ckp5g7i5g04yy17l8viaxmxgi'
+            mapStyle='mapbox://styles/zuzuc/ckpf84jbh0x1i17l9flyv6is6'
+            // old: mapbox://styles/zuzuc/ckp5g7i5g04yy17l8viaxmxgi'
             onViewportChange={(viewport) => setViewport(viewport)}>
 
             <NavigationControl style={navControlStyle} />
