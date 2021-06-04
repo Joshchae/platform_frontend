@@ -14,16 +14,16 @@ function ClimateMigrationMap() {
     const [viewport, setViewport] = useState({
         longitude: 169.1264892, 
         latitude: 17.9815443,
-        width: '100vw',
-        height: '100vh',
+        width: '60vw',
+        height: '40vh',
         zoom: 1.5
       });
 
-     const [postData, setPostData] = useState([]);
-     const [selectedPost, setSelectedPost] = useState(null);
+    const [postData, setPostData] = useState([]);
+    const [selectedPost, setSelectedPost] = useState(null);
         
      /* fetch Data from MongoDB, localhost*/
-     useEffect(() => {
+    useEffect(() => {
       const listener = e => {
         if (e.key === 'Escape') {
           setSelectedPost(null);
@@ -52,11 +52,12 @@ function ClimateMigrationMap() {
                 
                 
       return (
-        <div>
+        <div className='map'>
             <ReactMapGL
             {...viewport}
             mapboxApiAccessToken={process.env.REACT_APP_MAPBOX_TOKEN}
-            mapStyle='mapbox://styles/zuzuc/ckp5g7i5g04yy17l8viaxmxgi'
+            mapStyle='mapbox://styles/zuzuc/ckpf84jbh0x1i17l9flyv6is6'
+            // old: mapbox://styles/zuzuc/ckp5g7i5g04yy17l8viaxmxgi'
             onViewportChange={(viewport) => setViewport(viewport)}>
             <NavigationControl style={navControlStyle} />
         
