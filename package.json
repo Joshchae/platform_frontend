@@ -11,6 +11,7 @@
     "axios": "^0.21.1",
     "bootstrap": "^4.6.0",
     "country-json": "^1.1.2",
+    "cra-template-particles": "^1.10.0",
     "d3": "^6.7.0",
     "d3-fetch": "^2.0.0",
     "d3-scale": "^3.3.0",
@@ -27,7 +28,9 @@
     "react-scripts": "4.0.3",
     "react-simple-maps": "^2.3.0",
     "react-tooltip": "4.2.21",
+    "react-tsparticles": "^1.27.0",
     "topojson-client": "^3.1.0",
+    "typescript": "^3.9.6",
     "web-vitals": "^1.1.2"
   },
   "scripts": {

@@ -1,4 +1,5 @@
 import React from 'react';
+// import '../../App.css';
 import './Footer.css';
 import Disclaimer from '../../pages/disclaimer/Disclaimer';
 import { CgCopyright } from 'react-icons/cg';
