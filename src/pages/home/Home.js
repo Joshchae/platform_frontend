@@ -1,5 +1,5 @@
-import React from 'react'
-import './Home.css'
+import React from 'react';
+import './Home.css';
 
 function Home() {
     return (
@@ -9,7 +9,6 @@ function Home() {
             Name, Slogan<br/>
             Button: Conflicts<br/>
             Button: Climate-induce migration<br/>
-            
         </div>
     )
 }

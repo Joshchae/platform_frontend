@@ -14,6 +14,8 @@ function Header() {
                 <br />
                 <NavLink to="/Conflicts">Conflicts</NavLink>
                 <br />
+                <NavLink to="/Conflicts2">Conflicts2</NavLink>
+                <br />
             </nav>
         </div>
     )

@@ -1,12 +1,36 @@
-import React from 'react'
+import React, { useState } from 'react'
+import ClimateMigrationMap from './ClimateMigrationMap'
+import ClimateMigrationFact from './ClimateMigrationFacts'
+import ClimateMigrationSubmit from './ClimateMigrationSubmit'
+import ClimateMigrationStory from './ClimateMigrationStory'
 import './ClimateMigration.css'
 
 function ClimateMigrationHome() {
+    const [renderMap, setRenderMap] = useState(false)
+    const [renderBgi, setRenderBgi] = useState(false)
+    const [renderSubmit, setRenderSubmit] = useState(false)
+    const [renderStory, setRenderStory] = useState(false)
+
+    const toggleMap = () => { setRenderMap(!renderMap) }
+    const toggleBgi = () => { setRenderBgi(!renderBgi) }
+    const toggleSubmit = (e) => { 
+        e.preventDefault();
+        setRenderSubmit(!renderSubmit)
+        setRenderStory(!renderStory) }
+    
     return (
         <div>
-            Landing page for climate-induced migration<br />
-            Button to explore Background information<br />
-            Button to explore map, stories<br />
+            <button onClick={toggleBgi}>Background information</button>
+            <button onClick={toggleMap}>Stories around</button>
+            {renderMap ?
+                <>
+                  <button onClick={toggleSubmit}>Submit your story</button>
+                  <ClimateMigrationMap />
+                  {renderStory ? '' : <ClimateMigrationStory />}
+                </>
+             : ''}
+            {renderBgi ? <ClimateMigrationFact /> : ''}
+            {renderSubmit ? <ClimateMigrationSubmit toggleSubmit={toggleSubmit}/> : ''}
         </div>
     )
 }

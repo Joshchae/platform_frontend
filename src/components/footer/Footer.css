@@ -1,0 +1,40 @@
+.footer {
+  background-size: cover;
+  width: 100%;
+  min-width: 35rem;
+  min-height: 2rem;
+  max-height: 4rem;
+  background-color: transparent;
+  /* background-color: #00303f; */
+  /* opacity: 0.5; */
+  /* color: #f5f4f4; */
+  color: #00303f;
+  position: absolute;
+  bottom: 0;
+}
+
+/* .footer-column {
+  display: flex; 
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  flex-wrap: wrap; 
+} */
+
+.disclaimer-copyright {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-around;
+  padding: 1em 1em 0 1em;
+}
+
+.disclaimer {
+  display: inline-flex;
+  justify-content: space-between;
+}
+
+.copyright {
+  display: inline-flex;
+  justify-content: space-between;
+}

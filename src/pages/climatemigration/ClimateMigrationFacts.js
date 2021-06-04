@@ -1,4 +1,17 @@
-// //On this page fact cards shall be displayed
+import React from 'react'
+import './ClimateMigration.css'
+
+function ClimateMigrationFacts() {
+    return (
+        <div>
+        Fact Cards shall be displayed here  
+        </div>
+    )
+}
+
+export default ClimateMigrationFacts;
+
+
 // import './ClimateMigration.css'
 // import React, {useState, Fragment} from "react";
 // import Button from "@material-ui/core/Button";

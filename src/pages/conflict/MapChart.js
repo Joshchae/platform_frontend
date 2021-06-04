@@ -8,11 +8,13 @@ import {
   Graticule
 } from "react-simple-maps";
 
+
 // const width = '960vw';
 // const height = '500vh';
 
 const geoUrl =
   "https://raw.githubusercontent.com/zcreativelabs/react-simple-maps/master/topojson-maps/world-110m.json";
+
 
 const group = (objectArray, property) => {
   return objectArray.reduce((acc, obj) => {
