@@ -13,7 +13,7 @@ function Footer() {
                     <Disclaimer />Disclaimer
                     </div>
                     <div className='copyright'>
-                        <p><CgCopyright style={iconStyles} /> 2021 Made with ❤️ by Josh, Franzi, Joldon </p>
+                        <p><CgCopyright style={iconStyles} /> 2021 by Josh, Franzi, Joldon </p>
                     </div>
                 </div>
             </div>

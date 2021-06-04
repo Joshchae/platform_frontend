@@ -15,7 +15,7 @@ function Header() {
             <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="mr-auto">
                 <Nav.Link href="/">Home</Nav.Link>
-                <Nav.Link href="/about">About us</Nav.Link>
+                <Nav.Link href="/about">About</Nav.Link>
                 {/* <Nav.Link href="/ClimateMigration">Climate-induced Migration</Nav.Link>
                 <Nav.Link href="/Conflicts">Conflicts</Nav.Link> */}
                 <NavDropdown title="Climate-induced Migration" id="basic-nav-dropdown">
