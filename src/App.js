@@ -15,9 +15,13 @@ import ClimateMigrationMap from './pages/climatemigration/ClimateMigrationMap';
 import ClimateMigrationSubmit from './pages/climatemigration/ClimateMigrationSubmit';
 import ClimateMigrationFacts from './pages/climatemigration/ClimateMigrationFacts';
 // import ClimateMigrationStory from './pages/climatemigration/ClimateMigrationStory';
+import ClimateMigrationAdmin from './pages/climatemigration/ClimateMigrationAdmin';
+
+import './App.css';
+import './index.css';
+import Header from './components/Header';
 // import NotFound from './components/NotFound';
 import './scss/custom.scss';
-
 
 //++++++++++++ Routes ++++++++++++++++++++++
 function App() {
@@ -35,21 +39,26 @@ function App() {
           <About />
         </Route>
 
-        <Route path="/ClimateMigration/Map">
-          <ClimateMigrationMap />
-        </Route>
-        <Route path="/ClimateMigration/Submit">
-          <ClimateMigrationSubmit />
-        </Route>
-        <Route path="/ClimateMigration/Facts">
-          <ClimateMigrationFacts />
-        </Route>
-        <Route path="/ClimateMigration">
-          <ClimateMigrationHome />
-        </Route>
-         {/* <Route path="/ClimateMigration/Map/stories/:id">
-          <ClimateMigrationStory /> 
-        </Route> */}
+
+        {/* Climate Migration */}
+          <Route path="/ClimateMigration/Map">
+            <ClimateMigrationMap />
+          </Route>
+          <Route path="/ClimateMigration/Submit">
+            <ClimateMigrationSubmit />
+          </Route>
+          <Route path="/ClimateMigration/Facts">
+            <ClimateMigrationFacts />
+          </Route>
+          <Route path="/ClimateMigration/Admin13">
+            <ClimateMigrationAdmin />
+          </Route>
+          {/* <Route path="/ClimateMigration/Map/stories/:id">
+            <ClimateMigrationStory /> 
+          </Route> */}
+          <Route path="/ClimateMigration">
+            <ClimateMigrationHome />
+          </Route>
         {/* Conflicts */}
           <Route path="/Conflicts2">
             <ConflictHome2 />
