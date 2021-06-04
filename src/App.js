@@ -19,9 +19,9 @@ import ClimateMigrationAdmin from './pages/climatemigration/ClimateMigrationAdmi
 
 import './App.css';
 import './index.css';
-import Header from './components/Header';
-// import NotFound from './components/NotFound';
 import './scss/custom.scss';
+// import NotFound from './components/NotFound';
+
 
 //++++++++++++ Routes ++++++++++++++++++++++
 function App() {
