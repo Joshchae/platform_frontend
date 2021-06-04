@@ -50,15 +50,15 @@ function App() {
          {/* <Route path="/ClimateMigration/Map/stories/:id">
           <ClimateMigrationStory /> 
         </Route> */}
-       
         {/* Conflicts */}
-        <Route path="/Conflicts2">
-          <ConflictHome2 />
-        </Route>
-        <Route path="/Conflicts">
-          <ConflictHome />
-        </Route>
-        {/* <Route component={NotFound} /> */}
+          <Route path="/Conflicts2">
+            <ConflictHome2 />
+          </Route>
+          <Route path="/Conflicts">
+            <ConflictHome />
+          </Route>
+          <Route component={Home} path="/home" />
+          {/* <Route component={NotFound} /> */}
         </Switch>
         </main>
         <Footer />
