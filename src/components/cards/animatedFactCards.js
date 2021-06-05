@@ -1,33 +1,30 @@
-// import React from "react";
-//import ReactCardFlip from 'react-card-flig;
+import React, { useState } from "react";
+// import { Card, CardImg, CardBody, CardTitle, CardSubtitle } from 'react-bootstrap/Card';
+// import { Button, ButtonGroup } from 'react-bootstrap/Button'; 
+import ReactCardFlip from 'react-card-flip';
+import './AnimatedCards.css';
 
-// class App extends React.Component {
-//   constructor() {
-//     super();
-//       this.state = {
-//       isFlipped: false
-//     };
-//     this.handleClick = this.handleClick.bind(this);
-//   }
 
-//   handleClick(e) {
-//     e.preventDefault();
-//     this.setState(prevState => ({ isFlipped: !prevState.isFlipped }));
-//   }
+function AnimatedFactCards () {
+    const [isFlipped, setIsFlipped] = useState(false);
 
-//   render() {
-//     return (
-//       <ReactCardFlip isFlipped={this.state.isFlipped} flipDirection="vertical">
-//         <YOUR_FRONT_CCOMPONENT>
-//           This is the front of the card.
-//           <button onClick={this.handleClick}>Click to flip</button>
-//         </YOUR_FRONT_CCOMPONENT>
+    const handleClick = () => {
+        setIsFlipped(!isFlipped);
+    }
+    return (
+        <ReactCardFlip isFlipped={isFlipped} flipDirection="horizontal">
+        <div className='cardstyle-front'>
+            <div img src='img.jpg' alt=''>
+            What is climate-induced migration?</div> 
+            <button onClick={handleClick}>Click to flip</button>
+        </div>
 
-//         <YOUR_BACK_COMPONENT>
-//           This is the back of the card.
-//           <button onClick={this.handleClick}>Click to flip</button>
-//         </YOUR_BACK_COMPONENT>
-//       </ReactCardFlip>
-//     )
-//   }
-// }
+        <div className='cardstyle-back'>
+          This is the back of the card.
+          <button onClick={handleClick}>Click to flip</button>
+        </div>
+      </ReactCardFlip>
+    )
+}
+
+export default AnimatedFactCards;
