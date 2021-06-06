@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import ClimateMigrationMap from './ClimateMigrationMap'
 import ClimateMigrationFact from './ClimateMigrationFacts'
 import ClimateMigrationSubmit from './ClimateMigrationSubmit'
-import ClimateMigrationStory from './ClimateMigrationStory'
+import ClimateMigrationStory from './ClimateMigrationStories'
 import './ClimateMigration.css'
 
 function ClimateMigrationHome() {
