@@ -23,7 +23,7 @@ function Header() {
                     <NavDropdown.Item href="/ClimateMigration">Start</NavDropdown.Item>
                     <NavDropdown.Item href="/ClimateMigration/Facts">Facts</NavDropdown.Item>
                     <NavDropdown.Item href="/ClimateMigration/Map">Map</NavDropdown.Item>
-                    <NavDropdown.Item href="/ClimateMigration/Map/stories">Stories</NavDropdown.Item>
+                    <NavDropdown.Item href="/ClimateMigration/Stories">Stories</NavDropdown.Item>
                     <NavDropdown.Divider />
                     <NavDropdown.Item href="/ClimateMigration/Submit">Submit your story</NavDropdown.Item>
                 </NavDropdown>
