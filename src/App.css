@@ -25,6 +25,7 @@
   background: linear-gradient(90deg, #b3dbd3, #faf1e8);
   background-size: cover;
   background-position: absolute;
+  z-index: 1;
   align-items: center;
   text-align: center;
   position: relative;

@@ -28,8 +28,8 @@ function App() {
     <div className="App">
      {/* <Logo /> */}
      <Header />
-     {/* <SlideButton /> */}
-     <main> 
+
+     <main>
       <Switch>
         <Route exact path="/" component={Home} >
           <Home />

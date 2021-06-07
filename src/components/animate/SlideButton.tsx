@@ -2,7 +2,6 @@ import React from 'react'
 import { useSpring, animated } from '@react-spring/web'
 import { useDrag } from 'react-use-gesture'
 import styles from './styles.module.css'
-import ClimateMigrationSubmit from '../../pages/climatemigration/ClimateMigrationSubmit'
 
 const left = {
     bg: `linear-gradient(120deg, #f093fb 0%, #f5576c 100%)`,
