@@ -15,6 +15,16 @@
   position: relative;
 }
 
+.subtext {
+  font-style: italic;
+  text-align: left;
+  padding-top: 0.8rem;
+}
+
+.subtext p {
+  font-size: 0.8rem;
+}
+
 /* .mapboxgl-map {
   margin: 10rem;
   position: absolute;
