@@ -3,7 +3,7 @@ import Particles from 'react-tsparticles';
 import './../../App.css';
 import './Home.css';
 import Button from 'react-bootstrap/Button';
-import SlideButton from '../../components/animate/SlideButton.tsx'
+// import SlideButton from '../../components/animate/SlideButton.tsx'
 
 function Home() {
 
@@ -159,7 +159,7 @@ function Home() {
                 fps_limit: 60,
                 background: {
                     // image: "url('https://cdn.pixabay.com/photo/2016/01/19/17/29/earth-1149733_960_720.jpg')",
-                    // image: "url('https://cdn.pixabay.com/photo/2017/03/16/21/09/galaxy-2150265_960_720.png')",
+                    image: "url('https://cdn.pixabay.com/photo/2017/03/16/21/09/galaxy-2150265_960_720.png')",
                     // image: "url('https://cdn.pixabay.com/photo/2012/04/18/01/45/world-36479_960_720.png')",
                     // image: "url('https://cdn.pixabay.com/photo/2013/06/06/15/36/world-117174_960_720.png')",
                     // image: "url('https://cdn.pixabay.com/photo/2018/03/20/18/23/cartography-3244166_960_720.png')",
