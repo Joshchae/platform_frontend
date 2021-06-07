@@ -106,8 +106,8 @@ return (
         </div>
         {/* ----------- beginning of FORMIK -------------- */}
         <div style={{ width: 700, backgroundColor: "beige", margin: '5rem' }}>
-            <div>
-              <Formik validationSchema={schema} 
+            <div> 
+              <Formik validationSchema={schema}
                  onSubmit={(values, {setSubmitting, resetForm}) => {
                      // When button submits form and form is in the process of submitting, submit button is disabled
                      setSubmitting(true);

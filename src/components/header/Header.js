@@ -30,9 +30,6 @@ function Header() {
                 <NavDropdown title="Conflicts" id="basic-nav-dropdown">
                     <NavDropdown.Item href="/Conflicts">Map 1</NavDropdown.Item>
                     <NavDropdown.Item href="/Conflicts2">Map 2</NavDropdown.Item>
-                    <NavDropdown.Item href="#action/3.3">Map 3</NavDropdown.Item>
-                    <NavDropdown.Divider />
-                    <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
                 </NavDropdown>
                 </Nav>
             </Navbar.Collapse>       
