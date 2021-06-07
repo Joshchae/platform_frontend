@@ -26,53 +26,55 @@ import './scss/custom.scss';
 function App() {
   return (
     <div className="App">
+      <div>
      {/* <Logo /> */}
-     <Header />
+      <Header />
 
-     <main>
-      <Switch>
-        <Route exact path="/" component={Home} >
-          <Home />
-          {/* <Route component={Home} path="/home" /> */}
-        </Route>
-        <Route exact path="/about">
-          <About />
-        </Route>
+      <main>
+        <Switch>
+          <Route exact path="/" component={Home} >
+            <Home />
+            {/* <Route component={Home} path="/home" /> */}
+          </Route>
+          <Route exact path="/about">
+            <About />
+          </Route>
 
-        {/* Climate Migration */}
-          <Route path="/ClimateMigration/Map">
-            <ClimateMigrationMap />
-          </Route>
-          <Route path="/ClimateMigration/Submit">
-            <ClimateMigrationSubmit />
-          </Route>
-          <Route path="/ClimateMigration/Facts">
-            <ClimateMigrationFacts />
-          </Route>
-          <Route path="/ClimateMigration/Stories">
-            <ClimateMigrationStories />
-          </Route>
-          <Route path="/ClimateMigration/Admin13">
-            <ClimateMigrationAdmin />
-          </Route>
-          {/* <Route path="/ClimateMigration/Map/stories/:id">
-            <ClimateMigrationStory /> 
-          </Route> */}
-          <Route path="/ClimateMigration">
-            <ClimateMigrationHome />
-          </Route>
-        {/* Conflicts */}
-          <Route path="/Conflicts2">
-            <ConflictHome2 />
-          </Route>
-          <Route path="/Conflicts">
-            <ConflictHome />
-          </Route>
-          <Route component={Home} path="/home" />
-          {/* <Route component={NotFound} /> */}
-        </Switch>
-        </main>
-        <Footer />
+          {/* Climate Migration */}
+            <Route path="/ClimateMigration/Map">
+              <ClimateMigrationMap />
+            </Route>
+            <Route path="/ClimateMigration/Submit">
+              <ClimateMigrationSubmit />
+            </Route>
+            <Route path="/ClimateMigration/Facts">
+              <ClimateMigrationFacts />
+            </Route>
+            <Route path="/ClimateMigration/Stories">
+              <ClimateMigrationStories />
+            </Route>
+            <Route path="/ClimateMigration/Admin13">
+              <ClimateMigrationAdmin />
+            </Route>
+            {/* <Route path="/ClimateMigration/Map/stories/:id">
+              <ClimateMigrationStory /> 
+            </Route> */}
+            <Route path="/ClimateMigration">
+              <ClimateMigrationHome />
+            </Route>
+          {/* Conflicts */}
+            <Route path="/Conflicts2">
+              <ConflictHome2 />
+            </Route>
+            <Route path="/Conflicts">
+              <ConflictHome />
+            </Route>
+            <Route component={Home} path="/home" />
+            {/* <Route component={NotFound} /> */}
+          </Switch>
+          </main>
+      </div>
+          <Footer />
     </div>
   );
 }
