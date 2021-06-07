@@ -20,6 +20,8 @@
   position: relative;
   background-size: cover;
   min-height: 1rem;
+  max-height:20rem;
+  padding: 2rem;
   width: 100%;
   position: absolute;
   bottom: 0;

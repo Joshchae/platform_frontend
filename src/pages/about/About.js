@@ -33,7 +33,7 @@ function About() {
     };
 
     const handleGitJoldonClick = (e) => {
-        let path = window.open('https://www.github.com');
+        let path = window.open('https://github.com/Joldon?tab=repositories');
         history.push(path);
     }
 
@@ -89,15 +89,3 @@ function About() {
 }
 
 export default About;
-
-// /* <div className='linkedin-github'>
-//     <h3>Josh</h3>
-//         <li><IoLogoLinkedin onClick={handleLinkedInJoshClick} /></li>
-//         <li><IoLogoGithub onClick={handleGitJoshClick} /></li>
-//     <h3>Franzi</h3>
-//         <li><IoLogoLinkedin onClick={handleLinkedInFranziClick} /></li>
-//         <li><IoLogoGithub onClick={handleGitFranziClick} /></li>
-//     <h3>Joldon</h3>
-//         <li><IoLogoLinkedin onClick={handleLinkedInJoldonClick} /></li>
-//         <li><IoLogoGithub onClick={handleGitJoldonClick} /></li>
-// </div> */

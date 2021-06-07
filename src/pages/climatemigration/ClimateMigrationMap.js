@@ -29,20 +29,6 @@ function ClimateMigrationMap() {
         window.removeEventListener('keydown', listener);
       };
     }, []);
-    
-    /* fetch Data from MongoDB, localhost. Now, it's gone at ClimateApi */ 
-    // const fetchData = async () => {
-    //   try {
-    //     const posts = await axios.get('http://localhost:5000/posts')
-    //       console.log('posts', posts.data.data);
-    //       setPostData(posts.data.data);
-    //   } catch (err) {
-    //     console.log('error fetching /posts', err)
-    //   }
-    // };              
-    // useEffect(() => {
-    //   fetchData()
-    // }, [])
 
       return (
         <div className='map'>

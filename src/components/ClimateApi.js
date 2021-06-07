@@ -5,7 +5,7 @@ function ClimateApi () {
     const [postData, setPostData] = useState([]);
     const fetchData = async () => {
         try {
-            const posts = await axios.get('http://localhost:5000/posts')
+            const posts = await axios.get('https://climate-migration-stories.herokuapp.com/posts')
               console.log('posts', posts.data.data);
               setPostData(posts.data.data);
         } catch (err) {
@@ -20,4 +20,3 @@ function ClimateApi () {
 }
 
 export default ClimateApi
-

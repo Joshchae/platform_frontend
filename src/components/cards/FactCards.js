@@ -28,7 +28,7 @@ const FactCards = ({ fact }) => {
         <div>
           This is the front of the card
           <h3>{fact.title}</h3>
-          <img width="200" src={fact.gif} alt="" />
+          <img width="200" src={fact.image} alt="picture" />
         </div>
       </div>
       <div
