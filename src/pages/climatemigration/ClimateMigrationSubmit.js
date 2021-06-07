@@ -36,7 +36,7 @@ function ClimateMigrationSubmit({toggleSubmit, SubmitToast}) {
     // };
     /* ------------------------- end of Without FORMIK ----------------------------*/
     const [show, setShow] = useState(false);
-    const postUrl = 'http://localhost:5000/posts';
+    const postUrl = 'https://climate-migration-stories.herokuapp.com/posts';
     const handleSubmit2 = ({values}) => {
         // e.preventDefault();
         axios.post(postUrl, {
@@ -105,9 +105,9 @@ return (
             }
         </div>
         {/* ----------- beginning of FORMIK -------------- */}
-        <div style={{ width: 700, backgroundColor: "beige"}}>
+        <div style={{ width: 700, backgroundColor: "beige", margin: '5rem' }}>
             <div>
-              <Formik validationSchema={schema}
+              <Formik validationSchema={schema} 
                  onSubmit={(values, {setSubmitting, resetForm}) => {
                      // When button submits form and form is in the process of submitting, submit button is disabled
                      setSubmitting(true);
@@ -197,6 +197,7 @@ return (
                 <Toast onClose={() => setShow(false)} show={show} delay={3000} autohide>
                     <Toast.Header>
                         <strong>Thanks for sharing your story!</strong>
+                        <p>We will review your submitted story and publish it as long as it does not violate our policies.</p>
                     </Toast.Header>
                 </Toast>
             </Col>

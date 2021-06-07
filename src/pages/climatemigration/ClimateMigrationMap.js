@@ -80,6 +80,10 @@ function ClimateMigrationMap() {
 
 
             </ReactMapGL>
+            <div className="subtext">
+              <p>The boundaries and the names shown and the designations used on this map do not imply official endorsement or acceptance by MapStories.
+              </p>
+            </div>
         </div>
       );
     }

@@ -6,7 +6,7 @@ import Disclaimer from '../../pages/disclaimer/Disclaimer';
 import { CgCopyright } from 'react-icons/cg';
 
 function Footer() {
-    const iconStyles = { color: '#00303f', fontSize: "0.8em" };
+    const iconStyles = { color: '#f5f4f4', fontSize: "0.8em" };
     return (
         <div className="footer_container">
             {/* <div className='footer'>
