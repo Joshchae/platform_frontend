@@ -33,14 +33,13 @@ const FactCards = ({ fact }) => {
       </div>
       <div
         style={CardStyle}
-        // onMouseLeave={handleClick}
+        onMouseLeave={handleClick}
         className="CardBack"
       >
        <div>
           This is the back of the card
           <h5>{fact.text}</h5>
         </div>
-        <button onClick={handleClick}>Click to flip back</button>
       </div>
     </ReactCardFlip>
   );
