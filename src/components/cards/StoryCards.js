@@ -22,7 +22,7 @@ const CardStyle = {
       <ReactCardFlip isFlipped={isFlipped} flipDirection="horizontal">
         <div
           style={CardStyle}
-          onMouseEnter={handleClick} 
+          // onMouseEnter={handleClick} 
           className="CardFront"
         >
           <div>
@@ -30,17 +30,18 @@ const CardStyle = {
             <h3>{fact.title}</h3>
             <img width="200" src={fact.gif} alt="" />
           </div>
+          <button onClick={handleClick}>Click to read more</button>
         </div>
         <div
           style={CardStyle}
-          // onMouseLeave={handleClick}
+          onMouseLeave={handleClick}
           className="CardBack"
         >
          <div>
             This is the back of the card
             <h5>{fact.text}</h5>
           </div>
-          <button onClick={handleClick}>Click to flip back</button>
+          {/* <button onClick={handleClick}>Click to flip back</button> */}
         </div>
       </ReactCardFlip>
     );
