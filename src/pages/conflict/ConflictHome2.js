@@ -1,19 +1,16 @@
-import React, { useState } from 'react'
-import ReactTooltip from 'react-tooltip';
+import React from 'react'
 // import {fetchConflicts} from 'useData'
-import MapChart from './MapChart'
 import './Conflict.css';
+import ControlledTabs from './ControlledTabs';
 
 function ConflictHome2() {
-    
-    const [content, setContent] = useState("");
 
     return (
       <div>
-        <MapChart setTooltipContent={setContent} />
-        <ReactTooltip>{content}</ReactTooltip>
+        <ControlledTabs />
       </div>
     );
 }
+
 
 export default ConflictHome2

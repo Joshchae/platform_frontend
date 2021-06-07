@@ -31,5 +31,11 @@ circle {
 
  .path.rsm-graticule {
      width: 960;
-     height: 500;
+     height: 550;
+ }
+
+ .ControlledTabs {
+     display: flex;
+     /* align-items: center; */
+     position: top;
  }
