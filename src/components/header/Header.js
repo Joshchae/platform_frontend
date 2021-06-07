@@ -19,6 +19,7 @@ function Header() {
                 {/* <Nav.Link href="/ClimateMigration">Climate-induced Migration</Nav.Link>
                 <Nav.Link href="/Conflicts">Conflicts</Nav.Link> */}
                 <NavDropdown title="Climate-induced Migration" id="basic-nav-dropdown">
+                    <NavDropdown.Item href="/ClimateMigration">SubHome</NavDropdown.Item>
                     <NavDropdown.Item href="/ClimateMigration/Facts">Facts</NavDropdown.Item>
                     <NavDropdown.Item href="/ClimateMigration/Map">Map</NavDropdown.Item>
                     <NavDropdown.Item href="/ClimateMigration/Map/stories">Stories</NavDropdown.Item>

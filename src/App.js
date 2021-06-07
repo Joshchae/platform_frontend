@@ -21,6 +21,7 @@ import './App.css';
 import './index.css';
 // import NotFound from './components/NotFound';
 import './scss/custom.scss';
+// import SlideButton from './components/animate/SlideButton';
 
 //++++++++++++ Routes ++++++++++++++++++++++
 function App() {
@@ -28,6 +29,7 @@ function App() {
     <div className="App">
      {/* <Logo /> */}
      <Header />
+     {/* <SlideButton /> */}
      <main> 
       <Switch>
         <Route exact path="/" >
