@@ -23,9 +23,9 @@ const ConflictHome = () => {
     // console.log(filteredData);
     const rowByCountry = new Map();
     filteredData.forEach(d => {
-        rowByCountry.set(d.country_id, d);
+        rowByCountry.set(d.relid, d);
     });
-    
+    console.log(rowByCountry)
     
     const colorValue = d => d.Result;
     // console.log(colorValue)

@@ -14,14 +14,13 @@ import ClimateMigrationHome from './pages/climatemigration/ClimateMigrationHome'
 import ClimateMigrationMap from './pages/climatemigration/ClimateMigrationMap';
 import ClimateMigrationSubmit from './pages/climatemigration/ClimateMigrationSubmit';
 import ClimateMigrationFacts from './pages/climatemigration/ClimateMigrationFacts';
-// import ClimateMigrationStory from './pages/climatemigration/ClimateMigrationStory';
+import ClimateMigrationStories from './pages/climatemigration/ClimateMigrationStories';
 import ClimateMigrationAdmin from './pages/climatemigration/ClimateMigrationAdmin';
 
 import './App.css';
 import './index.css';
-// import NotFound from './components/NotFound';
 import './scss/custom.scss';
-// import SlideButton from './components/animate/SlideButton';
+// import NotFound from './components/NotFound';
 
 //++++++++++++ Routes ++++++++++++++++++++++
 function App() {
@@ -32,14 +31,13 @@ function App() {
      {/* <SlideButton /> */}
      <main> 
       <Switch>
-        <Route exact path="/" >
+        <Route exact path="/" component={Home} >
           <Home />
           {/* <Route component={Home} path="/home" /> */}
         </Route>
         <Route exact path="/about">
           <About />
         </Route>
-
 
         {/* Climate Migration */}
           <Route path="/ClimateMigration/Map">
@@ -50,6 +48,9 @@ function App() {
           </Route>
           <Route path="/ClimateMigration/Facts">
             <ClimateMigrationFacts />
+          </Route>
+          <Route path="/ClimateMigration/Stories">
+            <ClimateMigrationStories />
           </Route>
           <Route path="/ClimateMigration/Admin13">
             <ClimateMigrationAdmin />

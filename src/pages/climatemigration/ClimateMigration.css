@@ -11,7 +11,8 @@
 }
 
 .map {
-  padding: 5rem;
+  padding: 2rem;
+  position: relative;
 }
 
 /* .mapboxgl-map {
