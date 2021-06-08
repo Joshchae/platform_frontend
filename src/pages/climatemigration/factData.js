@@ -11,47 +11,38 @@ import cmStorytelling from "../../img/storytelling.png";
 const factData = [
   {
     image: cmWhat,
-    title: "title",
     text: "text",
   },
   {
     image: cmWhy,
-    title: "title",
     text: "text",
   },
   {
     image: cmWhen,
-    title: "title",
     text: "text",
   },
   {
     image: cmWho,
-    title: "title",
     text: "text",
   },
   {
     image: cmWhere,
-    title: "title",
     text: "text",
   },
   {
     image: cmNoRefugees,
-    title: "title",
     text: "text",
   },
   {
     image: cmII,
-    title: "title",
     text: "text",
   },
   {
     image: cmStory,
-    title: "title",
     text: "text",
   },
   {
     image: cmStorytelling,
-    title: "title",
     text: "text",
   },
 ];

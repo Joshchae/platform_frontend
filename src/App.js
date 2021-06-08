@@ -5,7 +5,7 @@ import "./index.css";
 import Header from "./components/header/Header";
 import Home from "./pages/home/Home";
 import About from "./pages/about/About";
-import Footer from "./components/footer/Footer";
+// import Footer from "./components/footer/Footer";
 
 import ConflictHome from "./pages/conflict/ConflictHome";
 import ConflictHome2 from "./pages/conflict/ConflictHome2";
