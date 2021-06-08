@@ -116,8 +116,9 @@ function ClimateMigrationMap() {
 
       <div className="subtext">
         <p>
-          The boundaries and the names shown and the designations used on this
-          map do not imply official endorsement or acceptance by MapStories.
+          <strong>Note:</strong> The boundaries and the names shown and the designations used on this
+          map do not imply official endorsement or acceptance by MapStories. <br />
+          The Mercator projection currently used in this map does not accurately represent the geographic size of countries. 
         </p>
       </div>
     </div>

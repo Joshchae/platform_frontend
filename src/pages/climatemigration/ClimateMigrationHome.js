@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import ClimateMigrationMap from "./ClimateMigrationMap";
 import ClimateMigrationFact from "./ClimateMigrationFacts";
 import ClimateMigrationSubmit from "./ClimateMigrationSubmit";
-import ClimateMigrationStories from "./ClimateMigrationStories";
+// import ClimateMigrationStories from "./ClimateMigrationStories";
 import Button from "react-bootstrap/Button";
 import "./ClimateMigration.css";
 
