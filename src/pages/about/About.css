@@ -1,4 +1,4 @@
-.blue-box{
+.blue-box {
   min-width: 20rem;
   max-width: 50rem;
   margin: 4rem auto;
@@ -11,7 +11,6 @@
   text-align: left;
   padding: 0.5rem;
 }
-
 
 .about-box {
   min-width: 20rem;
@@ -33,4 +32,3 @@
   display: inline;
   cursor: pointer;
 }
-
