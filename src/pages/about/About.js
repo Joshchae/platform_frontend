@@ -51,8 +51,8 @@ function About() {
                     <Card.Body>
                     <Card.Title>Josh</Card.Title>
                     <Card.Text>
-                        This is a wider card with supporting text below as a natural lead-in to
-                        additional content. This content is a little bit longer.
+                        Full-stack Web/App Developer,<br /> with business-mindset and Entrepreneurship.
+                        <br />
                         <li><IoLogoLinkedin onClick={handleLinkedInJoshClick} /></li>
                         <li><IoLogoGithub onClick={handleGitJoshClick} /></li>
                     </Card.Text>
