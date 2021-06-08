@@ -29,7 +29,6 @@ function App() {
       <div>
      {/* <Logo /> */}
       <Header />
-
       <main>
         <Switch>
           <Route exact path="/" component={Home} >
@@ -73,8 +72,8 @@ function App() {
             {/* <Route component={NotFound} /> */}
           </Switch>
           </main>
+          <Footer />
       </div>
-          {/* <Footer /> */}
     </div>
   );
 }

@@ -39,8 +39,7 @@ const MapChart = ({ setTooltipContent }) => {
   const colorScale = scaleLinear()
     .domain([0, maxConflicts])
     .range(["#ffedea", "#ff5233"]);
-  
-  const filteredUrl = 'https://ucdpapi.pcr.uu.se/api/gedevents/20.1?pagesize=100'
+
   const ucdpJson = '/ucdp.json'
 
   const fetchConflicts = async () => {
@@ -50,6 +49,11 @@ const MapChart = ({ setTooltipContent }) => {
       ...item,
       countryCode: item.relid.substring(0, 3)
     }));
+    
+    const handleFilter = (data) => {
+      
+      return;
+    }
     
     const groupedData = group(data, "countryCode");
     const maxConflicts = Object.keys(groupedData).reduce((max, country) =>
@@ -78,13 +82,20 @@ const MapChart = ({ setTooltipContent }) => {
   };
   /* -------- end of select ---------- */
 
-  /* -------- beginning of params url ---------- */
+  /* -------- beginning of filter data ---------- */
   const [inputValues, setInputValues] = useState([])
   const updateInputValue = e => (
     setInputValues(e.target.value)
   )
-  // console.log(resultStartDate)
-  // console.log(resultEndDate)
+  
+  const [filterStatus, setFilterStatus] = useState('inactive')
+  const toggleFilter = (e) => {
+    e.preventDefault();
+    setFilterStatus(!filterStatus)
+  }
+  // useEffect(()=> {
+  //   handleFilter()
+  // }, [filterStatus])
 
   /* -------- end of params url ---------------- */
     
@@ -105,6 +116,7 @@ const MapChart = ({ setTooltipContent }) => {
         <div>
           <DatePickerGroup />
         </div>
+        <button type="apply" onClick={toggleFilter}>Apply</button>
       </div>
 
       {/* -------------- Map Library -------------- */}
