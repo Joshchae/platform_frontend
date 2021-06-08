@@ -64,8 +64,7 @@ function About() {
                     <Card.Body>
                     <Card.Title>Franzi</Card.Title>
                     <Card.Text>
-                        This card has supporting text below as a natural lead-in to additional
-                        content.{' '}
+                        Full-Stack Developer <br />with an interdisciplinary background in Environmental Justice and International Relations.  <br />
                         <li><IoLogoLinkedin onClick={handleLinkedInFranziClick} /></li>
                         <li><IoLogoGithub onClick={handleGitFranziClick} /></li>
                     </Card.Text>
@@ -75,9 +74,7 @@ function About() {
                     <Card.Body>
                     <Card.Title>Joldon</Card.Title>
                     <Card.Text>
-                        This is a wider card with supporting text below as a natural lead-in to
-                        additional content. This card has even longer content than the first to
-                        show that equal height action.
+                        +++Insert your text+++ <br />
                         <li><IoLogoLinkedin onClick={handleLinkedInJoldonClick} /></li>
                         <li><IoLogoGithub onClick={handleGitJoldonClick} /></li>
                     </Card.Text>

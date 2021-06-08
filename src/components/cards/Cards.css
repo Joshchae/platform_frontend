@@ -10,8 +10,9 @@
 }
 
 .CardBack {
-  background-color: "success";
-  color: "primary";
+  background-color: #00303f;
+  color: #f5f4f4;
+  font-size: 0.2em;
   cursor: pointer;
   display: flex;
   justify-content: center;

@@ -15,7 +15,7 @@ const factData = [
   },
   {
     image: cmWhy,
-    text: "text",
+    text: "Climate change is resulting in a rising sea level, increased drought in the driest regions of the world, crop failure, soil salination, and frequent meteorological disasters such as storms and hurricanes.",
   },
   {
     image: cmWhen,

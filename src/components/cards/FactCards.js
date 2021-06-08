@@ -26,7 +26,7 @@ const FactCards = ({ fact }) => {
         </div>
         <div style={CardStyle} onMouseLeave={handleClick} className="CardBack">
           <div>
-            <h5>{fact.text}</h5>
+            <h5 style={{ fontSize: "small" }}>{fact.text}</h5>
           </div>
         </div>
     </ReactCardFlip>
