@@ -19,18 +19,17 @@ const FactCards = ({ fact }) => {
 
   return (
     <ReactCardFlip isFlipped={isFlipped} flipDirection="horizontal">
-      <div style={CardStyle} onMouseEnter={handleClick} className="CardFront">
-        <div>
-          {/* This is the front of the card  */}
-          <img width="200px" height="200px" src={fact.image} alt="" />
+        <div style={CardStyle} onMouseEnter={handleClick} className="CardFront">
+          <div>
+            <img src={fact.image} alt="" />
+          </div>
         </div>
-      </div>
-      <div style={CardStyle} onMouseLeave={handleClick} className="CardBack">
-        <div>
-          This is the back of the card
-          <h5>{fact.text}</h5>
+        <div style={CardStyle} onMouseLeave={handleClick} className="CardBack">
+          <div>
+            This is the back of the card
+            <h5>{fact.text}</h5>
+          </div>
         </div>
-      </div>
     </ReactCardFlip>
   );
 };
