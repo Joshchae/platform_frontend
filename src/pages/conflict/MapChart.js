@@ -49,9 +49,11 @@ const MapChart = ({ setTooltipContent }) => {
       ...item,
       countryCode: item.relid.substring(0, 3)
     }));
-    
+    console.log(data)
+
     const handleFilter = (data) => {
-      
+      // const filteredType = data.filter(data.type_of_violence === `${values}`)
+      // setData(filteredData);
       return;
     }
     
