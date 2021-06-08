@@ -107,7 +107,7 @@ function ClimateMigrationMap() {
               <Modal.Header closeButton>
                 <Modal.Title>{selectedPost.title}</Modal.Title>
               </Modal.Header>
-              <Modal.Body>{selectedPost.region}</Modal.Body>
+              <Modal.Body>{selectedPost.story}</Modal.Body>
             </Modal>
           </Popup>
         ) : null}

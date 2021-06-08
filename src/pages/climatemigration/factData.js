@@ -1,13 +1,38 @@
-import climateInducedMigration from "../../img/what-is-climate-induced-migration.png";
+import cmWhat from "../../img/what-is-climate-induced-migration.png";
 
 const factData = [
   {
-    image: climateInducedMigration,
+    image: cmWhat,
     title: "title",
     text: "text",
   },
   {
-    image: "https://media.giphy.com/media/YrSZQZTMsdT0qrOZOk/source.gif",
+    image: "",
+    title: "title",
+    text: "text",
+  },
+  {
+    image: cmWhat,
+    title: "title",
+    text: "text",
+  },
+  {
+    image: "picture",
+    title: "title",
+    text: "text",
+  },
+  {
+    image: "picture",
+    title: "title",
+    text: "text",
+  },
+  {
+    image: "picture",
+    title: "title",
+    text: "text",
+  },
+  {
+    image: "picture",
     title: "title",
     text: "text",
   },

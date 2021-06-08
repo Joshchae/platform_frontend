@@ -6,12 +6,15 @@ import factData from "./factData";
 
 function ClimateMigrationFacts() {
   return (
-    <div className="grid" style={{ margin: "auto", width: "50%" }}>
+    <div>
+      <div className="grid" style={{margin: "auto" , width: "60%"}}>
       {factData.map((item, index) => (
         <FactCards fact={item} key={`card-${index}`} />
       ))}
+      </div>
     </div>
   );
 }
 
 export default ClimateMigrationFacts;
+
