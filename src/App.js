@@ -27,19 +27,17 @@ function App() {
   return (
     <div className="App">
       <div>
-        {/* <Logo /> */}
-        <Header />
-
-        <main>
-          <Switch>
-            <Route exact path="/" component={Home}>
-              <Home />
-              {/* <Route component={Home} path="/home" /> */}
-            </Route>
-            <Route exact path="/about">
-              <About />
-            </Route>
-
+     {/* <Logo /> */}
+      <Header />
+      <main>
+        <Switch>
+          <Route exact path="/" component={Home} >
+            <Home />
+            {/* <Route component={Home} path="/home" /> */}
+          </Route>
+          <Route exact path="/about">
+            <About />
+          </Route>
             {/* Climate Migration */}
             <Route path="/ClimateMigration/Map">
               <ClimateMigrationMap />

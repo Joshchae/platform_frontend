@@ -41,7 +41,8 @@ function Home() {
               <Button variant="success" href="/ClimateMigration" >Climate-induced Migration</Button>        
             </div>
           </div>
-          <div>
+          </div>
+
             <Particles id="tsparticles"
               options={{
                 backgroundMode: {
@@ -168,12 +169,14 @@ function Home() {
                     // image: "url('https://cdn.pixabay.com/photo/2017/09/26/17/51/people-2789522_960_720.png)",
                     position: "50% 50%",
                     repeat: "no repeat",
-                    size: "cover"
+                    size: "cover",
+                    height: "100%",
                 }
               }}
             />
-          </div>
-        </div>
+
+          
+        
       </div>
     );
 }
