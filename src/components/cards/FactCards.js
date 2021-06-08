@@ -3,7 +3,7 @@ import ReactCardFlip from "react-card-flip";
 import "./Cards.css";
 
 const CardStyle = {
-  border: "1px solid black",
+  border: "1px solid #634d4d",
   padding: "20px",
   margin: "20px",
   width: "200px",
@@ -26,7 +26,6 @@ const FactCards = ({ fact }) => {
         </div>
         <div style={CardStyle} onMouseLeave={handleClick} className="CardBack">
           <div>
-            This is the back of the card
             <h5>{fact.text}</h5>
           </div>
         </div>

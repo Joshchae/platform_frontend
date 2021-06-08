@@ -1,49 +1,48 @@
-import cmWhat from "../../img/what-is-climate-induced-migration.png";
+import cmWhat from "../../img/what.png";
+import cmWhy from "../../img/why.png";
+import cmWho from "../../img/who.png";
+import cmWhere from "../../img/where.png";
+import cmWhen from "../../img/when.png";
+import cmNoRefugees from "../../img/norefugees.png";
+import cmII from "../../img/internal-illegal.png";
+import cmStory from "../../img/story.png";
+import cmStorytelling from "../../img/storytelling.png";
 
 const factData = [
   {
     image: cmWhat,
-    title: "title",
     text: "text",
   },
   {
-    image: "",
-    title: "title",
+    image: cmWhy,
     text: "text",
   },
   {
-    image: cmWhat,
-    title: "title",
+    image: cmWhen,
     text: "text",
   },
   {
-    image: "picture",
-    title: "title",
+    image: cmWho,
     text: "text",
   },
   {
-    image: "picture",
-    title: "title",
+    image: cmWhere,
     text: "text",
   },
   {
-    image: "picture",
-    title: "title",
+    image: cmNoRefugees,
     text: "text",
   },
   {
-    image: "picture",
-    title: "title",
+    image: cmII,
     text: "text",
   },
   {
-    image: "picture",
-    title: "title",
+    image: cmStory,
     text: "text",
   },
   {
-    image: "picture",
-    title: "title",
+    image: cmStorytelling,
     text: "text",
   },
 ];
