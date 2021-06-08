@@ -21,8 +21,6 @@ function ClimateMigrationMap() {
   const postData = ClimateApi();
   // const [postData, setPostData] = useState([]);
   const [selectedPost, setSelectedPost] = useState(null);
-
-  const values = [true, "sm-down", "md-down", "lg-down", "xl-down", "xxl-down"];
   const [fullscreen, setFullscreen] = useState(true);
   const [show, setShow] = useState(false);
 
@@ -52,12 +50,13 @@ function ClimateMigrationMap() {
         mapStyle="mapbox://styles/zuzuc/ckpf84jbh0x1i17l9flyv6is6"
         // old: mapbox://styles/zuzuc/ckp5g7i5g04yy17l8viaxmxgi'
         onViewportChange={(viewport) => setViewport(viewport)}
+
       >
         <NavigationControl style={navControlStyle} />
 
         {postData.map((post) => (
           <Marker
-            key={post.id}
+            key={post._id}
             longitude={post.location.longitude}
             latitude={post.location.latitude}
             offsetLeft={-20}
@@ -82,9 +81,11 @@ function ClimateMigrationMap() {
           <Popup
             latitude={selectedPost.location.latitude}
             longitude={selectedPost.location.longitude}
-            onClose={() => {
-              setSelectedPost(null);
-            }}
+            closeButton={false}
+            // closeOnClick={false}
+            // onClose={() => {
+            //   setSelectedPost(null);
+            // }}
           >
             <div>
               <h2>{selectedPost.title}</h2>
@@ -92,17 +93,7 @@ function ClimateMigrationMap() {
               <h4>{selectedPost.country}</h4>
               <h5>{selectedPost.locationName}</h5>
               <p>{selectedPost.story.substr(0, 25)}...</p>
-              {/* <button onClick={console.log(selectedPost._id)}>
-                Explore more
-              </button> */}
-              <Button
-                className="me-2"
-                onClick={(e) => {
-                  e.preventDefault();
-                  handleShow(true);
-                  console.log("not working");
-                }}
-              >
+              <Button className="me-2" onClick={handleShow}>
                 Explore more
               </Button>
               <br />
@@ -112,16 +103,17 @@ function ClimateMigrationMap() {
                 alt={selectedPost.title}
               />
             </div>
+            <Modal show={show} fullscreen={fullscreen} onHide={() => setShow(false)}>
+              <Modal.Header closeButton>
+                <Modal.Title>{selectedPost.title}</Modal.Title>
+              </Modal.Header>
+              <Modal.Body>{selectedPost.region}</Modal.Body>
+            </Modal>
           </Popup>
         ) : null}
+
       </ReactMapGL>
 
-      <Modal show={show} fullscreen={fullscreen} onHide={() => setShow(false)}>
-        <Modal.Header closeButton>
-          <Modal.Title>Modal</Modal.Title>
-        </Modal.Header>
-        <Modal.Body>Modal body content</Modal.Body>
-      </Modal>
       <div className="subtext">
         <p>
           The boundaries and the names shown and the designations used on this
