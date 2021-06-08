@@ -41,8 +41,10 @@ function About() {
         <>
         <div className='blue-box'>
             <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, voluptates. Fuga, ullam ut voluptas, harum, dolore ducimus voluptate voluptatibus aliquid nesciunt aut provident. Nisi maxime quibusdam aut ab omnis porro?
-
             </h4>
+            <h5>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. In a, vitae distinctio dolorem delectus optio, sint exercitationem nisi iste corporis dolorum eos eligendi. Nisi ea molestias repudiandae voluptates laudantium labore?
+            </h5>
         </div>
         <div>
             <div className='about-box'>

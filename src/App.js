@@ -1,25 +1,25 @@
-import React from 'react';
+import React from "react";
 import { Switch, Route } from "react-router-dom";
-import './App.css';
-import './index.css';
-import Header from './components/header/Header';
-import Home from './pages/home/Home';
-import About from './pages/about/About';
-import Footer from './components/footer/Footer';
+import "./App.css";
+import "./index.css";
+import Header from "./components/header/Header";
+import Home from "./pages/home/Home";
+import About from "./pages/about/About";
+import Footer from "./components/footer/Footer";
 
-import ConflictHome from './pages/conflict/ConflictHome';
-import ConflictHome2 from './pages/conflict/ConflictHome2';
+import ConflictHome from "./pages/conflict/ConflictHome";
+import ConflictHome2 from "./pages/conflict/ConflictHome2";
 
-import ClimateMigrationHome from './pages/climatemigration/ClimateMigrationHome';
-import ClimateMigrationMap from './pages/climatemigration/ClimateMigrationMap';
-import ClimateMigrationSubmit from './pages/climatemigration/ClimateMigrationSubmit';
-import ClimateMigrationFacts from './pages/climatemigration/ClimateMigrationFacts';
-import ClimateMigrationStories from './pages/climatemigration/ClimateMigrationStories';
-import ClimateMigrationAdmin from './pages/climatemigration/ClimateMigrationAdmin';
+import ClimateMigrationHome from "./pages/climatemigration/ClimateMigrationHome";
+import ClimateMigrationMap from "./pages/climatemigration/ClimateMigrationMap";
+import ClimateMigrationSubmit from "./pages/climatemigration/ClimateMigrationSubmit";
+import ClimateMigrationFacts from "./pages/climatemigration/ClimateMigrationFacts";
+import ClimateMigrationStories from "./pages/climatemigration/ClimateMigrationStories";
+import ClimateMigrationAdmin from "./pages/climatemigration/ClimateMigrationAdmin";
 
-import './App.css';
-import './index.css';
-import './scss/custom.scss';
+import "./App.css";
+import "./index.css";
+import "./scss/custom.scss";
 // import NotFound from './components/NotFound';
 
 //++++++++++++ Routes ++++++++++++++++++++++
@@ -38,8 +38,7 @@ function App() {
           <Route exact path="/about">
             <About />
           </Route>
-
-          {/* Climate Migration */}
+            {/* Climate Migration */}
             <Route path="/ClimateMigration/Map">
               <ClimateMigrationMap />
             </Route>
@@ -49,19 +48,19 @@ function App() {
             <Route path="/ClimateMigration/Facts">
               <ClimateMigrationFacts />
             </Route>
+            {/* <Route path="/ClimateMigration/Stories/:id">
+              <ClimateMigrationStories />
+            </Route> */}
             <Route path="/ClimateMigration/Stories">
               <ClimateMigrationStories />
             </Route>
             <Route path="/ClimateMigration/Admin13">
               <ClimateMigrationAdmin />
             </Route>
-            {/* <Route path="/ClimateMigration/Map/stories/:id">
-              <ClimateMigrationStory /> 
-            </Route> */}
             <Route path="/ClimateMigration">
               <ClimateMigrationHome />
             </Route>
-          {/* Conflicts */}
+            {/* Conflicts */}
             <Route path="/Conflicts2">
               <ConflictHome2 />
             </Route>
@@ -71,9 +70,9 @@ function App() {
             <Route component={Home} path="/home" />
             {/* <Route component={NotFound} /> */}
           </Switch>
-          </main>
-          <Footer />
+        </main>
       </div>
+      {/* <Footer /> */}
     </div>
   );
 }
