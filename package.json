@@ -10,6 +10,7 @@
     "@testing-library/user-event": "^12.8.3",
     "axios": "^0.21.1",
     "bootstrap": "^4.6.0",
+    "country-code-lookup": "0.0.19",
     "country-json": "^1.1.2",
     "cra-template-particles": "^1.10.0",
     "d3": "^6.7.0",
