@@ -131,11 +131,11 @@ function ClimateMigrationMap() {
             // }}
           >
             <div>
-              <h2>{selectedPost.title}</h2>
-              <h3>{selectedPost.region}</h3>
-              <h4>{selectedPost.country}</h4>
-              <h5>{selectedPost.locationName}</h5>
-              <p>{selectedPost.story.substr(0, 25)}...</p>
+              <h4>{selectedPost.title}</h4>
+              <h6>{selectedPost.region}</h6>
+              <h6>{selectedPost.country}</h6>
+              <h6>{selectedPost.locationName}</h6>
+              <p>{selectedPost.story.substr(0, 50)}...</p>
               <Button className="me-2" onClick={handleShow}>
                 Explore more
               </Button>
