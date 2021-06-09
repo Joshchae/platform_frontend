@@ -92,6 +92,9 @@ const MapChart = ({ setTooltipContent }) => {
             geographies.map((geo) => {
               const countryCode = geo.properties.ISO_A3;
               const d = data[countryCode];
+              // if(!d){
+              //   console.log(geo.properties.ISO_A3)
+              
               return (
                 <Geography
                 key={geo.rsmKey}
@@ -122,6 +125,7 @@ const MapChart = ({ setTooltipContent }) => {
 export default MapChart;
 
 
+
 // "https://raw.githubusercontent.com/zcreativelabs/react-simple-maps/master/topojson-maps/world-110m.json";
 // 'https://unpkg.com/world-atlas@2.0.2/countries-50m.json'
 
@@ -129,6 +133,8 @@ export default MapChart;
 // const ucdpUrl = 'https://ucdpapi.pcr.uu.se/api/gedevents/20.1?pagesize=1000&page=1'
 // const filteredUrl = 'https://ucdpapi.pcr.uu.se/api/gedevents/20.1?StartDate=2000-01-01&EndDate=2007-10-12'
 // const ucdpFullUrl = `https://ucdpapi.pcr.uu.se/api/gedevents/20.1?key=${process.env.REACT_APP_UPPSALA_TOKEN}`
+
+
 
 
 // "https://ucdpapi.pcr.uu.se/api/gedevents/20.1?StartDate=2000-01-01&EndDate=2007-10-12"
@@ -140,4 +146,10 @@ pass // const firstFiltered = `${filteredUrl}`/{option}={Date}
              >> `${filteredUrl}`/{option}={Date}&{option}={Date} >> StartDate=2000-01-01&EndDate=2007-10-12
 
              const [filtered, setFiltered] = useState(''); 
+            
 */
+
+
+//const filteredData = data.filter(d => d.type_of_violence === selectedType)
+// const typesOfViolence = types.filter(d => d.type_of_violence === ${selected Type})
+// const dateFilter = date.filter(date => date_start >= ${d.date_start} && date_end <= ${d.date_end})
