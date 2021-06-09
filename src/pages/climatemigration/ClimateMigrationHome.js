@@ -1,38 +1,57 @@
-import React, { useState } from 'react'
-import ClimateMigrationMap from './ClimateMigrationMap'
-import ClimateMigrationFact from './ClimateMigrationFacts'
-import ClimateMigrationSubmit from './ClimateMigrationSubmit'
-import ClimateMigrationStory from './ClimateMigrationStories'
-import './ClimateMigration.css'
+import React, { useState } from "react";
+import ClimateMigrationMap from "./ClimateMigrationMap";
+import ClimateMigrationFact from "./ClimateMigrationFacts";
+import ClimateMigrationSubmit from "./ClimateMigrationSubmit";
+import Button from "react-bootstrap/Button";
+import "./ClimateMigration.css";
 
 function ClimateMigrationHome() {
-    const [renderMap, setRenderMap] = useState(false)
-    const [renderBgi, setRenderBgi] = useState(false)
-    const [renderSubmit, setRenderSubmit] = useState(false)
-    const [renderStory, setRenderStory] = useState(false)
+  const [renderMap, setRenderMap] = useState(true);
+  const [renderSubmit, setRenderSubmit] = useState(false);
+  const [toggleBtn, setToggleBtn] = useState(true)
 
-    const toggleMap = () => { setRenderMap(!renderMap) }
-    const toggleBgi = () => { setRenderBgi(!renderBgi) }
-    const toggleSubmit = (e) => { 
-        e.preventDefault();
-        setRenderSubmit(!renderSubmit)
-        setRenderStory(!renderStory) }
-    
-    return (
-        <div>
-            <button onClick={toggleBgi}>Background information</button>
-            <button onClick={toggleMap}>Stories around</button>
-            {renderMap ?
-                <>
-                  <button onClick={toggleSubmit}>Submit your story</button>
-                  <ClimateMigrationMap />
-                  {renderStory ? '' : <ClimateMigrationStory />}
-                </>
-             : ''}
-            {renderBgi ? <ClimateMigrationFact /> : ''}
-            {renderSubmit ? <ClimateMigrationSubmit toggleSubmit={toggleSubmit}/> : ''}
-        </div>
-    )
+  const toggleButton = (e) => {
+    setRenderMap(!renderMap);
+    setToggleBtn(!toggleBtn)
+    e.preventDefault()
+  };
+
+  const toggleSubmit = (e) => {
+    e.preventDefault();
+    setRenderSubmit(!renderSubmit)
+  };
+
+  return (
+    <div>
+      <div>
+        
+      </div>
+    </div>
+  );
 }
 
 export default ClimateMigrationHome;
+
+// /*
+//     <button onClick={toggleBgi}>Background information</button>
+//       <button onClick={toggleMap}>Stories around</button>
+//       {renderMap ? (
+//         <>
+//           <button onClick={toggleSubmit}>Submit your story</button>
+//           {renderBgi && renderMap ? (
+//             <ClimateMigrationFact />
+//           ) : (
+//             <ClimateMigrationMap />
+//           )}
+//           {/* {renderStory ? "" : <ClimateMigrationStories />} */}
+//         </>
+//       ) : (
+//         ""
+//       )}
+//       {/* {renderBgi ? <ClimateMigrationFact /> : ""} */}
+//       {renderSubmit ? (
+//         <ClimateMigrationSubmit toggleSubmit={toggleSubmit} />
+//       ) : (
+//         ""
+//       )}
+// */

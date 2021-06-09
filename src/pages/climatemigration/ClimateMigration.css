@@ -11,8 +11,18 @@
 }
 
 .map {
-  padding: 2rem;
+  padding: 5rem;
   position: relative;
+}
+
+.subtext {
+  font-style: italic;
+  text-align: left;
+  padding-top: 0.8rem;
+}
+
+.subtext p {
+  font-size: 0.8rem;
 }
 
 /* .mapboxgl-map {

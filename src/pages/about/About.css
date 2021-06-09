@@ -1,4 +1,4 @@
-.blue-box{
+.blue-box {
   min-width: 20rem;
   max-width: 50rem;
   margin: 4rem auto;
@@ -12,8 +12,8 @@
   padding: 0.5rem;
 }
 
-
 .about-box {
+  position: relative;
   min-width: 20rem;
   max-width: 50rem;
   margin: 4rem auto;
@@ -25,7 +25,6 @@
   text-align: center;
   text-align: left;
   padding: 0.5rem;
-  position: relative;
 }
 
 .about-box li {
@@ -33,4 +32,3 @@
   display: inline;
   cursor: pointer;
 }
-

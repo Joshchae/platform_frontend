@@ -37,11 +37,12 @@ function Home() {
             </div>
             <div className='buttons'>
             {/* <SlideButton /> */}
-              <Button variant="success" href="/Conflicts2" >Conflicts</Button>
-              <Button variant="success" href="/ClimateMigration" >Climate-induced Migration</Button>        
+              <Button variant="success" href="/Conflicts" >Conflicts</Button>
+              <Button variant="success" href="/ClimateMigration/Map" >Climate-induced Migration</Button>        
             </div>
           </div>
-          <div>
+          </div>
+
             <Particles id="tsparticles"
               options={{
                 backgroundMode: {
@@ -159,7 +160,7 @@ function Home() {
                 fps_limit: 60,
                 background: {
                     // image: "url('https://cdn.pixabay.com/photo/2016/01/19/17/29/earth-1149733_960_720.jpg')",
-                    image: "url('https://cdn.pixabay.com/photo/2017/03/16/21/09/galaxy-2150265_960_720.png')",
+                    // image: "url('https://cdn.pixabay.com/photo/2017/03/16/21/09/galaxy-2150265_960_720.png')",
                     // image: "url('https://cdn.pixabay.com/photo/2012/04/18/01/45/world-36479_960_720.png')",
                     // image: "url('https://cdn.pixabay.com/photo/2013/06/06/15/36/world-117174_960_720.png')",
                     // image: "url('https://cdn.pixabay.com/photo/2018/03/20/18/23/cartography-3244166_960_720.png')",
@@ -168,12 +169,14 @@ function Home() {
                     // image: "url('https://cdn.pixabay.com/photo/2017/09/26/17/51/people-2789522_960_720.png)",
                     position: "50% 50%",
                     repeat: "no repeat",
-                    size: "cover"
+                    size: "cover",
+                    height: "100%",
                 }
               }}
             />
-          </div>
-        </div>
+
+          
+        
       </div>
     );
 }
