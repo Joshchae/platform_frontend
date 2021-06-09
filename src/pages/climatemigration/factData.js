@@ -15,7 +15,7 @@ const factData = [
   },
   {
     image: cmWhy,
-    text: "Climate change is resulting in rising sea levels, changing rainfall patterns, increased drought, crop failure, soil salination, and increased extreme weather events such as storms and hurricanes. As a response people are likely to be displaced or to decide to migrate or relocate.  ",
+    text: "Climate change is resulting in rising sea levels, changing rainfall patterns, increased drought, crop failure, soil salination, and increased extreme weather events such as hurricanes, cyclones and typhoons. As a response people are likely to be displaced or to decide to migrate or relocate.  ",
   },
   {
     image: cmWhen,

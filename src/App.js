@@ -7,12 +7,14 @@ import Home from "./pages/home/Home";
 import About from "./pages/about/About";
 // import Footer from "./components/footer/Footer";
 
-import ConflictHome from "./pages/conflict/ConflictHome";
+// import ConflictHome from "./pages/conflict/ConflictHome";
 import ConflictHome2 from "./pages/conflict/ConflictHome2";
 
+// import ClimateMigrationHome from "./pages/climatemigration/ClimateMigrationHome";
 import ClimateMigrationMap from "./pages/climatemigration/ClimateMigrationMap";
 import ClimateMigrationSubmit from "./pages/climatemigration/ClimateMigrationSubmit";
 import ClimateMigrationFacts from "./pages/climatemigration/ClimateMigrationFacts";
+// import ClimateMigrationStories from "./pages/climatemigration/ClimateMigrationStories";
 import ClimateMigrationAdmin from "./pages/climatemigration/ClimateMigrationAdmin";
 
 import "./App.css";

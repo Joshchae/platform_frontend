@@ -2,8 +2,8 @@ import React, { useState, useEffect } from "react";
 import ReactMapGL, { Marker, Popup, NavigationControl } from "react-map-gl";
 import { Button, Modal } from "react-bootstrap";
 import ClimateApi from "../../components/ClimateApi";
-import ClimateMigrationFact from "./ClimateMigrationFacts";
-import ClimateMigrationSubmit from "./ClimateMigrationSubmit";
+// import ClimateMigrationFact from "./ClimateMigrationFacts";
+// import ClimateMigrationSubmit from "./ClimateMigrationSubmit";
 import { GiPositionMarker } from "react-icons/gi";
 import "./ClimateMigration.css";
 // import axios from 'axios'
@@ -45,25 +45,25 @@ function ClimateMigrationMap() {
   }, []);
 
   // ----------------- Beginning of buttons above the mapbox ------------------- //
-  const [renderMap, setRenderMap] = useState(true);
-  const [renderSubmit, setRenderSubmit] = useState(false);
-  const [toggleBtn, setToggleBtn] = useState(true)
+  // const [renderMap, setRenderMap] = useState(true);
+  // const [renderSubmit, setRenderSubmit] = useState(false);
+  // const [toggleBtn, setToggleBtn] = useState(true)
 
-  const toggleButton = (e) => {
-    setRenderMap(!renderMap);
-    setToggleBtn(!toggleBtn)
-    e.preventDefault()
-  };
+  // const toggleButton = (e) => {
+  //   setRenderMap(!renderMap);
+  //   setToggleBtn(!toggleBtn)
+  //   e.preventDefault()
+  // };
 
-  const toggleSubmit = (e) => {
-    e.preventDefault();
-    setRenderSubmit(!renderSubmit)
-  };
+  // const toggleSubmit = (e) => {
+  //   e.preventDefault();
+  //   setRenderSubmit(!renderSubmit)
+  // };
   // ----------------- End of buttons above the mapbox ------------------- //
 
   return (
     <div className="map">
-      <div>
+      {/* <div>
           {renderMap ? (
             <div>
               {renderMap || renderSubmit ? 
@@ -85,7 +85,7 @@ function ClimateMigrationMap() {
             </div>
             )
           }
-        </div>
+        </div> */}
 
       <ReactMapGL
         {...viewport}
