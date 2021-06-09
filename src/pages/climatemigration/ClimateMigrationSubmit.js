@@ -197,7 +197,7 @@ function ClimateMigrationSubmit({ toggleSubmit, SubmitToast }) {
                     id="title"
                     type="text"
                     name="title"
-                    placeholder="Write donw title of your story"
+                    placeholder="Write down title of your story"
                     value={values.title}
                     onChange={handleChange}
                     isValid={touched.title && !errors.title}
@@ -223,7 +223,7 @@ function ClimateMigrationSubmit({ toggleSubmit, SubmitToast }) {
                   <Form.Control.Feedback>'Looks good!'</Form.Control.Feedback>
                 </Form.Group>
 
-                <Form.Group>
+                {/* <Form.Group>
                   <Form.File
                     className="position-relative"
                     name="image"
@@ -233,6 +233,21 @@ function ClimateMigrationSubmit({ toggleSubmit, SubmitToast }) {
                     feedback={errors.file}
                     feedbackTooltip
                   />
+                </Form.Group> */}
+
+                <Form.Group as={Col} md="10">
+                  <Form.Label htmlFor="image">Image URL</Form.Label>
+                  <Form.Control
+                    id="image"
+                    type="text"
+                    name="image"
+                    placeholder="Write down your image URL"
+                    value={values.image}
+                    onChange={handleChange}
+                    isValid={touched.image && !errors.image}
+                    isInvalid={!!errors.image}
+                  />
+                  <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
                 </Form.Group>
 
                 <Form.Row>
@@ -256,7 +271,7 @@ function ClimateMigrationSubmit({ toggleSubmit, SubmitToast }) {
                       id="nickname"
                       type="text"
                       name="nickname"
-                      placeholder="Write donw your nickname"
+                      placeholder="Write down your nickname"
                       value={values.nickname}
                       onChange={handleChange}
                       isValid={touched.nickname && !errors.nickname}

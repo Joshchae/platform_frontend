@@ -83,7 +83,7 @@ function About() {
                             <Card.Body>
                             <Card.Title>Joldon</Card.Title>
                             <Card.Text>
-                            Full-stack Web/App Developer <br />
+                            Full-stack Web/App Developer <br /> with a professional background in Political Science
                                 <li><IoLogoLinkedin onClick={handleLinkedInJoldonClick} /></li>
                                 <li><IoLogoGithub onClick={handleGitJoldonClick} /></li>
                             </Card.Text>

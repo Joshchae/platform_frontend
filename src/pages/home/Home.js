@@ -37,8 +37,8 @@ function Home() {
             </div>
             <div className='buttons'>
             {/* <SlideButton /> */}
-              <Button variant="success" href="/Conflicts2" >Conflicts</Button>
-              <Button variant="success" href="/ClimateMigration" >Climate-induced Migration</Button>        
+              <Button variant="success" href="/Conflicts" >Conflicts</Button>
+              <Button variant="success" href="/ClimateMigration/Map" >Climate-induced Migration</Button>        
             </div>
           </div>
           </div>

@@ -20,16 +20,16 @@ function Header() {
                 {/* <Nav.Link href="/ClimateMigration">Climate-induced Migration</Nav.Link>
                 <Nav.Link href="/Conflicts">Conflicts</Nav.Link> */}
                 <NavDropdown title="Climate-induced Migration" id="basic-nav-dropdown">
-                <NavDropdown.Item href="/ClimateMigration">Start</NavDropdown.Item>
+                {/* <NavDropdown.Item href="/ClimateMigration">Start</NavDropdown.Item> */}
                 <NavDropdown.Item href="/ClimateMigration/Facts">Facts</NavDropdown.Item>
                 <NavDropdown.Item href="/ClimateMigration/Map">Map</NavDropdown.Item>
-                <NavDropdown.Item href="/ClimateMigration/Stories">Stories</NavDropdown.Item>
+                {/* <NavDropdown.Item href="/ClimateMigration/Stories">Stories</NavDropdown.Item> */}
                 <NavDropdown.Divider />
                 <NavDropdown.Item href="/ClimateMigration/Submit">Submit your story</NavDropdown.Item>
                 </NavDropdown>
                 <NavDropdown title="Conflicts" id="basic-nav-dropdown">
-                    <NavDropdown.Item href="/Conflicts">Map 1</NavDropdown.Item>
-                    <NavDropdown.Item href="/Conflicts2">Map 2</NavDropdown.Item>
+                    <NavDropdown.Item href="/Conflicts">Map</NavDropdown.Item>
+                    {/* <NavDropdown.Item href="/Conflicts2">Map 2</NavDropdown.Item> */}
                 </NavDropdown>
                 </Nav>
             </Navbar.Collapse>       
