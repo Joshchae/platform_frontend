@@ -10,11 +10,9 @@ import About from "./pages/about/About";
 import ConflictHome from "./pages/conflict/ConflictHome";
 import ConflictHome2 from "./pages/conflict/ConflictHome2";
 
-import ClimateMigrationHome from "./pages/climatemigration/ClimateMigrationHome";
 import ClimateMigrationMap from "./pages/climatemigration/ClimateMigrationMap";
 import ClimateMigrationSubmit from "./pages/climatemigration/ClimateMigrationSubmit";
 import ClimateMigrationFacts from "./pages/climatemigration/ClimateMigrationFacts";
-import ClimateMigrationStories from "./pages/climatemigration/ClimateMigrationStories";
 import ClimateMigrationAdmin from "./pages/climatemigration/ClimateMigrationAdmin";
 
 import "./App.css";
@@ -42,30 +40,30 @@ function App() {
             <Route path="/ClimateMigration/Map">
               <ClimateMigrationMap />
             </Route>
-            <Route path="/ClimateMigration/Submit">
-              <ClimateMigrationSubmit />
-            </Route>
             <Route path="/ClimateMigration/Facts">
               <ClimateMigrationFacts />
+            </Route>
+            <Route path="/ClimateMigration/Submit">
+              <ClimateMigrationSubmit />
             </Route>
             {/* <Route path="/ClimateMigration/Stories/:id">
               <ClimateMigrationStories />
             </Route> */}
-            <Route path="/ClimateMigration/Stories">
+            {/* <Route path="/ClimateMigration/Stories">
               <ClimateMigrationStories />
-            </Route>
+            </Route> */}
             <Route path="/ClimateMigration/Admin13">
               <ClimateMigrationAdmin />
             </Route>
-            <Route path="/ClimateMigration">
+            {/* <Route path="/ClimateMigration">
               <ClimateMigrationHome />
-            </Route>
+            </Route> */}
             {/* Conflicts */}
-            <Route path="/Conflicts2">
-              <ConflictHome2 />
-            </Route>
-            <Route path="/Conflicts">
+            {/* <Route path="/Conflicts2">
               <ConflictHome />
+            </Route> */}
+            <Route path="/Conflicts">
+              <ConflictHome2 />
             </Route>
             <Route component={Home} path="/home" />
             {/* <Route component={NotFound} /> */}

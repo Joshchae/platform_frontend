@@ -74,7 +74,7 @@ function About() {
                     <Card.Body>
                     <Card.Title>Joldon</Card.Title>
                     <Card.Text>
-                        +++Insert your text+++ <br />
+                    Full-Stack Developer <br />with a professional background in Political Science <br />
                         <li><IoLogoLinkedin onClick={handleLinkedInJoldonClick} /></li>
                         <li><IoLogoGithub onClick={handleGitJoldonClick} /></li>
                     </Card.Text>

@@ -4,7 +4,6 @@ import { ComposableMap, Geographies, Geography, Sphere, Graticule } from "react-
 import DatePickerGroup from './DatePickerGroup'
 import "react-datepicker/dist/react-datepicker.css";
 
-
 const geoUrl = './world-110m.json'
 
 const group = (objectArray, property) => {
@@ -35,6 +34,7 @@ const MapChart = ({ setTooltipContent }) => {
   // const [resultStartDate, resultEndDate] = DatePickerGroup();
   const [data, setData] = useState({});
   const [maxConflicts, setMaxConflicts] = useState(0);
+  const [filteredData, setFilteredData] = useState([]);
   
   const colorScale = scaleLinear()
     .domain([0, maxConflicts])
@@ -49,57 +49,61 @@ const MapChart = ({ setTooltipContent }) => {
       ...item,
       countryCode: item.relid.substring(0, 3)
     }));
-    console.log(data)
+    console.log('json', typeof(data[0].type_of_violence))
 
-    const handleFilter = (data) => {
-      // const filteredType = data.filter(data.type_of_violence === `${values}`)
-      // setData(filteredData);
-      return;
-    }
-    
     const groupedData = group(data, "countryCode");
     const maxConflicts = Object.keys(groupedData).reduce((max, country) =>
-      max > groupedData[country].conflicts
-      ? max
-      : groupedData[country].conflicts
-      );
-      
-      setData(groupedData);
-      setMaxConflicts(maxConflicts);
+    max > groupedData[country].conflicts
+    ? max
+    : groupedData[country].conflicts
+    );
+    setData(groupedData);
+    setMaxConflicts(maxConflicts);
   };
+
+  console.log('unfiltered data', data);
+  
+  const handleFilter = (data, values) => {
+    const filteredArray = (values) ? data.filter(d => d.type_of_violence === Number(values)): {}
+    setFilteredData(filteredArray); 
+    console.log('filteredData', filteredData)
+  }
+  
+  const useFilter = (valueNum) => {
+    handleFilter(+valueNum)
+  }
   
   useEffect(() => {
     fetchConflicts();
   }, []);
+
   
   /* -------- beginning of select -------- */
   const [values, setValues] = useState('')
+  const [valueNum, setVauleNum] = useState(0)
   const handleChange = e => {
-    const { name, value } = e.target;
-      setValues({ 
-          ...values,
-          [name]: value
-      });
-      console.log(values)
+    const { value } = e.target;
+      setValues(value);
+      setVauleNum(Number(value));
+      console.log(value, typeof(Number(value)))
   };
   /* -------- end of select ---------- */
 
   /* -------- beginning of filter data ---------- */
-  const [inputValues, setInputValues] = useState([])
-  const updateInputValue = e => (
-    setInputValues(e.target.value)
-  )
+  // const [inputValues, setInputValues] = useState([])
+  // const updateInputValue = e => (
+  //   setInputValues(e.target.value)
+  // )
   
-  const [filterStatus, setFilterStatus] = useState('inactive')
-  const toggleFilter = (e) => {
-    e.preventDefault();
-    setFilterStatus(!filterStatus)
-  }
+  // const [filterStatus, setFilterStatus] = useState('inactive')
+  // const toggleFilter = (e) => {
+  //   e.preventDefault();
+  //   setFilterStatus(!filterStatus)
+  // }
   // useEffect(()=> {
   //   handleFilter()
   // }, [filterStatus])
-
-  /* -------- end of params url ---------------- */
+  /* -------- end of filter data ---------- */
     
 
   return (
@@ -108,17 +112,18 @@ const MapChart = ({ setTooltipContent }) => {
       <div>
         <div>
           <label htmlFor="type">type_of_violence</label>
-            <select id="type" name="type" values={values.type} onChange={handleChange}>
+            <select id="type" name="type" values={values} onChange={handleChange}>
                 <option value=''>type</option>
                 <option value='1'>state-based</option>
-                <option value='2'>non-state</option>              
+                <option value='2'>non-state</option>
                 <option value='3'>onesided</option>
             </select>
         </div>
         <div>
           <DatePickerGroup />
         </div>
-        <button type="apply" onClick={toggleFilter}>Apply</button>
+        <button onClick={useFilter}>Apply</button>
+        
       </div>
 
       {/* -------------- Map Library -------------- */}
@@ -129,7 +134,7 @@ const MapChart = ({ setTooltipContent }) => {
           {({ geographies }) =>
             geographies.map((geo) => {
               const countryCode = geo.properties.ISO_A3;
-              const d = data[countryCode];
+              const d = filteredData.length ? filteredData[countryCode] : data[countryCode];
               return (
                 <Geography
                 key={geo.rsmKey}
@@ -179,3 +184,12 @@ pass // const firstFiltered = `${filteredUrl}`/{option}={Date}
 
              const [filtered, setFiltered] = useState(''); 
 */
+
+/* ------ beginning of data filter -------- */  
+// data(each cases) from local json file
+// <json.Result.map(...item, countryCode:item.relid.substring(0, 3))>
+// where to filter data by type of violence
+// group(line 10) >> accumulate(conflicts: 1, fatalities: obj.best, countryName: obj.country))
+// data(total number of cases belong to countries)
+// const filteredArray2 = data.filter(d => d.type_of_violence === 3);
+/* ------ end of data filter -------- */

@@ -21,8 +21,8 @@ function DatePickerGroup() {
     // const date = today.getDate() + "-"+ parseInt(today.getMonth()+1) +"-"+today.getFullYear();
     const resultStartDate = transStartDate(startDate);
     const resultEndDate = transEndDate(endDate);
-    console.log(transStartDate(startDate))
-    console.log(transStartDate(endDate))
+    // console.log(transStartDate(startDate))
+    // console.log(transStartDate(endDate))
     
     return (
       <div>
