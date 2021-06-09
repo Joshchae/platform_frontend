@@ -3,7 +3,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 10px 10px 10px 10px;
+  /* border-radius: 10px 10px 10px 10px; */
   overflow: hidden;
   -webkit-box-shadow: 0px 12px 18px -6px rgba(0, 0, 0, 0.3);
   box-shadow: 0px 12px 18px -6px rgba(0, 0, 0, 0.3);
@@ -17,7 +17,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 10px 10px 10px 10px;
+  /* border-radius: 10px 10px 10px 10px; */
   overflow: hidden;
   -webkit-box-shadow: 0px 12px 18px -6px rgba(0, 0, 0, 0.3);
   box-shadow: 0px 12px 18px -6px rgba(0, 0, 0, 0.3);
@@ -31,7 +31,7 @@
 }
 
 .grid > div {
-  flex-basis: calc(10% - 40px);
+  flex-basis: calc(30% - 40px);
 }
 
 /* 

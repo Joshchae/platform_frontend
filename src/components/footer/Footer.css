@@ -26,6 +26,8 @@
 -> this is arbitrary to the height of the content-wrap padding-bottom: 2.5rem
 so both needs to be changed accordingly */
 
+/* include property sticky-footer or for presentation margin-bottom */
+
 #footer {
   position: absolute;
   bottom: 0;
@@ -37,25 +39,17 @@ so both needs to be changed accordingly */
   color: #00303f;
 }
 
-.footer-column {
-  width: 100%;
-  flex-direction: column;
-  text-align: right;
-  padding: 0 2rem 0 2rem;
-}
-
 .disclaimer-copyright {
-  display: inline-flex;
-  /* flex-direction: row; */
-  justify-content: space-between;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-around;
 }
 
-/* .disclaimer {
+.disclaimer {
   display: inline-flex;
-  justify-content: space-between;
 }
 
 .copyright {
   display: inline-flex;
-  justify-content: space-between;
-} */
+}
