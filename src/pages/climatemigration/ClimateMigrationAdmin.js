@@ -6,10 +6,10 @@ function ClimateMigrationAdmin() {
   // const [postStatus, setPostStatus] = useState(false)
 
   // ---------------- Fetching All posts ------------------ //
-  const adminUrl = "/api/posts/list";
+  // const adminUrl = ;
   const fetchAdminData = async () => {
     try {
-      const lists = await axios.get(adminUrl);
+      const lists = await axios.get("/api/posts/list");
       console.log("lists", lists.data.data);
       setAdminData(lists.data.data);
     } catch (err) {

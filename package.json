@@ -1,5 +1,5 @@
 {
-  "name": "platform-frontend",
+  "name": "platform_frontend",
   "version": "0.1.0",
   "proxy": "https://climate-migration-stories.herokuapp.com",
   "private": true,

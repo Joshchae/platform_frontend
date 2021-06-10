@@ -7,7 +7,7 @@ import ClimateMigrationSubmit from "./ClimateMigrationSubmit";
 import { GiPositionMarker } from "react-icons/gi";
 import "./../../App.css";
 import "../../scss/custom.scss";
-import "./ClimateMigration.css";
+import "./ClimateMigration.css";  
 
 // import axios from 'axios'
 // import {FaMapMarkerAlt} from 'react-icons/fa';
@@ -65,18 +65,18 @@ function ClimateMigrationMap() {
   // ----------------- End of buttons above the mapbox ------------------- //
   
   // ----------------- Create Filter function selected Region ------------ //
-  const [filteredData, setFilteredData] = useState([])
-  const filterRegion = (e) => {
-    const selectedRegion = e.target.value;
-    const fd = selectedRegion
-     ? postData.filter(
-       (post) => post.region === selectedRegion )
-       : postData;
-    setTimeout((
-      setFilteredData(fd)
-    ), 1000)
-    e.preventDefault();
-  }
+  // const [filteredData, setFilteredData] = useState([])
+  // const filterRegion = (e) => {
+  //   const selectedRegion = e.target.value;
+  //   const fd = selectedRegion
+  //    ? postData.filter(
+  //      (post) => post.region === selectedRegion )
+  //      : postData;
+  //   setTimeout((
+  //     setFilteredData(fd)
+  //   ), 1000)
+  //   e.preventDefault();
+  // }
 
   return (
     <div className="map">
@@ -93,7 +93,7 @@ function ClimateMigrationMap() {
                 <div className="redirect-btn2">
                   <Button variant="success" onClick={toggleSubmit}>Submit your story</Button>
                   {/* -------------- Select Region to be filtered -------------- */}
-                <span>
+                {/* <span>
                   <select name="selectedRegion" onChange={filterRegion} >
                     <option value="">All regions</option>
                     <option value="Eastern Caribbean">Eastern Caribbean</option>
@@ -102,7 +102,7 @@ function ClimateMigrationMap() {
                     <option value="West Africa">West Africa</option>
                     <option value="East Africa">East Africa</option>
                   </select>
-                </span>
+                </span> */}
                 </div>
 
               </div>
@@ -116,7 +116,7 @@ function ClimateMigrationMap() {
                   onViewportChange={(viewport) => setViewport(viewport)}
                 >
                   <NavigationControl style={navControlStyle} />
-                  {filteredData.map((post) => (
+                  {postData.map((post) => (
                     <Marker
                       key={post._id}
                       longitude={post.location.longitude}
