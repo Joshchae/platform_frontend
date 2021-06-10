@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import ReactMapGL, { Marker, Popup } from "react-map-gl";
-//NavigationControl
+
 import { Button, Modal } from "react-bootstrap";
 import ClimateApi from "../../components/ClimateApi";
 import ClimateMigrationFact from "./ClimateMigrationFacts";
@@ -8,8 +8,10 @@ import ClimateMigrationSubmit from "./ClimateMigrationSubmit";
 import { GiPositionMarker } from "react-icons/gi";
 import "./../../App.css";
 import "../../scss/custom.scss";
-import "./ClimateMigration.css";
+import "./ClimateMigration.css";  
 
+// mapboxgl.workerClass = MapboxWorker;
+// mapboxgl.workerClass = require("worker-loader?mapbox-gl/dist/mapbox-gl-csp-worker").default;
 // import axios from 'axios'
 // import {FaMapMarkerAlt} from 'react-icons/fa';
 // import StoryModal from "../../components/StoryModal";
@@ -66,14 +68,17 @@ function ClimateMigrationMap() {
   // ----------------- End of buttons above the mapbox ------------------- //
   
   // ----------------- Create Filter function selected Region ------------ //
-  // const [filteredPosts, setFilteredPosts] = useState([])
+  // const [filteredData, setFilteredData] = useState([])
   // const filterRegion = (e) => {
   //   const selectedRegion = e.target.value;
-  //   const filteredData = selectedRegion
+  //   const fd = selectedRegion
   //    ? postData.filter(
   //      (post) => post.region === selectedRegion )
   //      : postData;
-  //   return setFilteredPosts(filteredData)
+  //   setTimeout((
+  //     setFilteredData(fd)
+  //   ), 1000)
+  //   e.preventDefault();
   // }
 
   return (
@@ -90,13 +95,9 @@ function ClimateMigrationMap() {
                 </div>
                 <div className="redirect-btn2">
                   <Button variant="success" onClick={toggleSubmit}>Submit your story</Button>
-                </div>
-              </div>
-              <div>
-
-                {/* -------------- Select Region to be filtered -------------- */}
-                {/* <div>
-                  <select name="selectedRegion" onChange={filterRegion}>
+                  {/* -------------- Select Region to be filtered -------------- */}
+                {/* <span>
+                  <select name="selectedRegion" onChange={filterRegion} >
                     <option value="">All regions</option>
                     <option value="Eastern Caribbean">Eastern Caribbean</option>
                     <option value="South Pacific">South Pacific</option>
@@ -104,11 +105,15 @@ function ClimateMigrationMap() {
                     <option value="West Africa">West Africa</option>
                     <option value="East Africa">East Africa</option>
                   </select>
-                </div> */}
+                </span> */}
+                </div>
 
+              </div>
+
+              <div>
                 <ReactMapGL
                   {...viewport}
-                  mapboxApiAccessToken={process.env.REACT_APP_MAPBOX_TOKEN}
+                  mapboxApiAccessToken={process.env.REACT_APP_MAPBOX_ACCESS_TOKEN}
                   mapStyle="mapbox://styles/zuzuc/ckpf84jbh0x1i17l9flyv6is6"
                   // old: mapbox://styles/zuzuc/ckp5g7i5g04yy17l8viaxmxgi'
                   onViewportChange={(viewport) => setViewport(viewport)}

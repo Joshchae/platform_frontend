@@ -1,5 +1,5 @@
 {
-  "name": "platform-frontend",
+  "name": "platform_frontend",
   "version": "0.1.0",
   "proxy": "https://climate-migration-stories.herokuapp.com",
   "private": true,
@@ -36,6 +36,7 @@
     "topojson-client": "^3.1.0",
     "typescript": "^4.3.2",
     "web-vitals": "^1.1.2",
+    "worker-loader": "^3.0.8",
     "yup": "^0.32.9"
   },
   "scripts": {
