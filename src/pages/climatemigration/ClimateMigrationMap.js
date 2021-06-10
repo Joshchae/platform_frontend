@@ -20,8 +20,8 @@ function ClimateMigrationMap() {
     height: "70vh",
     zoom: 1.5,
   });
+  
   const postData = ClimateApi();
-  // const [postData, setPostData] = useState([]);
   const [selectedPost, setSelectedPost] = useState(null);
   const [fullscreen, setFullscreen] = useState(true);
   const [show, setShow] = useState(false);
@@ -60,18 +60,42 @@ function ClimateMigrationMap() {
     setRenderSubmit(!renderSubmit)
   };
   // ----------------- End of buttons above the mapbox ------------------- //
+  
+  // ----------------- Create Filter function selected Region ------------ //
+  // const [filteredPosts, setFilteredPosts] = useState([])
+  // const filterRegion = (e) => {
+  //   const selectedRegion = e.target.value;
+  //   const filteredData = selectedRegion
+  //    ? postData.filter(
+  //      (post) => post.region === selectedRegion )
+  //      : postData;
+  //   return setFilteredPosts(filteredData)
+  // }
 
   return (
     <div className="map">
       <div>
           {renderMap ? (
             <div>
-              {renderMap || renderSubmit ? 
+              {renderMap || renderSubmit ?
                 <Button variant="success" onClick={toggleButton}>Background</Button>
-               : <Button variant="success" onClick={toggleButton}>Stories</Button>
+               : <Button variant="success" onClick={toggleButton}>not working</Button>
               }
               <Button variant="success" onClick={toggleSubmit}>Submit your story</Button>
               <div>
+
+                {/* -------------- Select Region to be filtered -------------- */}
+                {/* <div>
+                  <select name="selectedRegion" onChange={filterRegion}>
+                    <option value="">All regions</option>
+                    <option value="Eastern Caribbean">Eastern Caribbean</option>
+                    <option value="South Pacific">South Pacific</option>
+                    <option value="West Pacific">West Pacific</option>
+                    <option value="West Africa">West Africa</option>
+                    <option value="East Africa">East Africa</option>
+                  </select>
+                </div> */}
+
                 <ReactMapGL
                   {...viewport}
                   mapboxApiAccessToken={process.env.REACT_APP_MAPBOX_TOKEN}

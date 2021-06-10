@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { scaleLinear } from "d3-scale";
 import { ComposableMap, Geographies, Geography, Sphere, Graticule } from "react-simple-maps";
-import DatePickerGroup from './DatePickerGroup'
+// import DatePickerGroup from './DatePickerGroup'
 import "react-datepicker/dist/react-datepicker.css";
 import conflictsData from './ucdp.json';
 import countryCode from 'country-code-lookup'

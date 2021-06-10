@@ -125,7 +125,7 @@ function ClimateMigrationSubmit({ toggleSubmit, SubmitToast }) {
               locationName: "",
               title: "",
               story: "",
-              image: null,
+              image: "",
               email: "",
               nickname: "",
             }}

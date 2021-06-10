@@ -75,15 +75,15 @@ function ClimateMigrationAdmin() {
               <th>ID</th>
               <th>Nickname</th>
               {/* <th>Email</th>
-                            <th>Region</th>
-                            <th>Country</th>
-                            <th>LocationName</th>
-                            <th>LocationID</th>
-                            <th>Longitude</th>
-                            <th>Latitude</th>
-                            <th>Title</th>
-                            <th>Story</th>
-                            <th>Image</th> */}
+                  <th>Region</th>
+                  <th>Country</th>
+                  <th>LocationName</th>
+                  <th>LocationID</th>
+                  <th>Longitude</th>
+                  <th>Latitude</th>
+                  <th>Title</th>
+                  <th>Story</th>
+                  <th>Image</th> */}
               <th>Status Handle</th>
             </tr>
           </thead>
