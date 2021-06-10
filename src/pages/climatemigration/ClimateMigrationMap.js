@@ -117,7 +117,7 @@ function ClimateMigrationMap() {
                 <ReactMapGL
                   {...viewport}
                   mapboxApiAccessToken={process.env.REACT_APP_MAPBOX_ACCESS_TOKEN}
-                  mapStyle="mapbox://styles/zuzuc/ckpf84jbh0x1i17l9flyv6is6"
+                  // mapStyle="mapbox://styles/zuzuc/ckpf84jbh0x1i17l9flyv6is6"
                   // old: mapbox://styles/zuzuc/ckp5g7i5g04yy17l8viaxmxgi'
                   onViewportChange={(viewport) => setViewport(viewport)}
                 >
