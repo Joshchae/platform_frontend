@@ -131,13 +131,13 @@ function ClimateMigrationMap() {
                           alt={selectedPost.title}
                         />
                       </div>
-                      <Modal style={{ fontFamily: 'Titillium Web', closeButton: '#f5f4f4'  }} show={show} fullscreen={fullscreen} onHide={() => setShow(false)}>
+                      <Modal style={{ fontFamily: 'Titillium Web' }} show={show} fullscreen={fullscreen} onHide={() => setShow(false)}>
                         <Modal.Header closeButton 
                         className='bg-success text-primary'>
                           <Modal.Title>{selectedPost.title}</Modal.Title>
                         </Modal.Header>
                         <Modal.Body 
-                          className='text-success'>{selectedPost.story}</Modal.Body>
+                          className='text-success-bold'>{selectedPost.story}</Modal.Body>
                       </Modal>
                     </Popup>
                   ) : null}
