@@ -1,4 +1,5 @@
 import React, { useState }from 'react';
+import {Link} from 'react-router-dom'
 import Particles from 'react-tsparticles';
 import './../../App.css';
 import './Home.css';
@@ -37,8 +38,8 @@ function Home() {
             </div>
             <div className='buttons'>
               {/* <SlideButton /> */}
-                <Button variant="success" href="/Conflicts" >Conflicts</Button>
-                <Button variant="success" href="/ClimateMigration/Map" >Climate-induced Migration</Button>        
+                <Button variant="success"><Link to="/Conflict">Conflicts</Link></Button>
+                <Button variant="success"><Link to="/ClimateMigration/Map" >Climate-induced Migration</Link></Button>        
             </div>
           </div>
           </div>
