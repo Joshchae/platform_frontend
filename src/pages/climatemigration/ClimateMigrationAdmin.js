@@ -6,7 +6,7 @@ function ClimateMigrationAdmin() {
   // const [postStatus, setPostStatus] = useState(false)
 
   // ---------------- Fetching All posts ------------------ //
-  const adminUrl = "https://climate-migration-stories.herokuapp.com/posts/list";
+  const adminUrl = "/api/posts/list";
   const fetchAdminData = async () => {
     try {
       const lists = await axios.get(adminUrl);
@@ -41,7 +41,7 @@ function ClimateMigrationAdmin() {
     console.log(locValue);
   };
   const locationUrl =
-    "http://climate-migration-stories.herokuapp.com/locations";
+    "/api/locations";
   const handleSubmit = (e) => {
     e.preventDefault();
     axios

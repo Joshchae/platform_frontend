@@ -65,15 +65,18 @@ function ClimateMigrationMap() {
   // ----------------- End of buttons above the mapbox ------------------- //
   
   // ----------------- Create Filter function selected Region ------------ //
-  // const [filteredPosts, setFilteredPosts] = useState([])
-  // const filterRegion = (e) => {
-  //   const selectedRegion = e.target.value;
-  //   const filteredData = selectedRegion
-  //    ? postData.filter(
-  //      (post) => post.region === selectedRegion )
-  //      : postData;
-  //   return setFilteredPosts(filteredData)
-  // }
+  const [filteredData, setFilteredData] = useState([])
+  const filterRegion = (e) => {
+    const selectedRegion = e.target.value;
+    const fd = selectedRegion
+     ? postData.filter(
+       (post) => post.region === selectedRegion )
+       : postData;
+    setTimeout((
+      setFilteredData(fd)
+    ), 1000)
+    e.preventDefault();
+  }
 
   return (
     <div className="map">
@@ -89,13 +92,9 @@ function ClimateMigrationMap() {
                 </div>
                 <div className="redirect-btn2">
                   <Button variant="success" onClick={toggleSubmit}>Submit your story</Button>
-                </div>
-              </div>
-              <div>
-
-                {/* -------------- Select Region to be filtered -------------- */}
-                {/* <div>
-                  <select name="selectedRegion" onChange={filterRegion}>
+                  {/* -------------- Select Region to be filtered -------------- */}
+                <span>
+                  <select name="selectedRegion" onChange={filterRegion} >
                     <option value="">All regions</option>
                     <option value="Eastern Caribbean">Eastern Caribbean</option>
                     <option value="South Pacific">South Pacific</option>
@@ -103,8 +102,12 @@ function ClimateMigrationMap() {
                     <option value="West Africa">West Africa</option>
                     <option value="East Africa">East Africa</option>
                   </select>
-                </div> */}
+                </span>
+                </div>
 
+              </div>
+
+              <div>
                 <ReactMapGL
                   {...viewport}
                   mapboxApiAccessToken={process.env.REACT_APP_MAPBOX_TOKEN}
@@ -113,7 +116,7 @@ function ClimateMigrationMap() {
                   onViewportChange={(viewport) => setViewport(viewport)}
                 >
                   <NavigationControl style={navControlStyle} />
-                  {postData.map((post) => (
+                  {filteredData.map((post) => (
                     <Marker
                       key={post._id}
                       longitude={post.location.longitude}
