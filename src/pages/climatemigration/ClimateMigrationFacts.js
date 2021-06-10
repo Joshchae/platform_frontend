@@ -12,6 +12,8 @@ function ClimateMigrationFacts() {
         <FactCards fact={item} key={`card-${index}`} />
       ))}
       </div>
+      <br />
+      <br />
     </div>
   );
 }

@@ -26,7 +26,7 @@ function Home() {
     //     Climate-induced Migration
     // </button>
 
- 
+  
 
     return (
       <div>
@@ -36,9 +36,9 @@ function Home() {
               <h1>Welcome</h1>
             </div>
             <div className='buttons'>
-            {/* <SlideButton /> */}
-              <Button variant="success" href="/Conflicts" >Conflicts</Button>
-              <Button variant="success" href="/ClimateMigration/Map" >Climate-induced Migration</Button>        
+              {/* <SlideButton /> */}
+                <Button variant="success" href="/Conflicts" >Conflicts</Button>
+                <Button variant="success" href="/ClimateMigration/Map" >Climate-induced Migration</Button>        
             </div>
           </div>
           </div>
