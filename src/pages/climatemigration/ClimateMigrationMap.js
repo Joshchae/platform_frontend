@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import ReactMapGL, { Marker, Popup, NavigationControl } from "react-map-gl";
 
-import mapboxgl from 'mapbox-gl/dist/mapbox-gl';
-import MapboxWorker from 'mapbox-gl/dist/mapbox-gl-csp-worker';
+// import mapboxgl from 'mapbox-gl/dist/mapbox-gl';
+// import MapboxWorker from 'mapbox-gl/dist/mapbox-gl-csp-worker';
 
 import { Button, Modal } from "react-bootstrap";
 import ClimateApi from "../../components/ClimateApi";
@@ -13,8 +13,8 @@ import "./../../App.css";
 import "../../scss/custom.scss";
 import "./ClimateMigration.css";  
 
-mapboxgl.workerClass = MapboxWorker;
-// mapboxgl.workerClass = require("worker-loader!mapbox-gl/dist/mapbox-gl-csp-worker").default;
+// mapboxgl.workerClass = MapboxWorker;
+// mapboxgl.workerClass = require("worker-loader?mapbox-gl/dist/mapbox-gl-csp-worker").default;
 // import axios from 'axios'
 // import {FaMapMarkerAlt} from 'react-icons/fa';
 // import StoryModal from "../../components/StoryModal";
