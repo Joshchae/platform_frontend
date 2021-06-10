@@ -22,7 +22,13 @@
 }
 
 .redirect-buttons {
+  display: flex;
+  flex-direction: row;
   padding-bottom: 2rem;
+}
+
+.redirect-btn1 {
+  margin-right: 0.8rem;
 }
 
 /* .mapboxgl-map {

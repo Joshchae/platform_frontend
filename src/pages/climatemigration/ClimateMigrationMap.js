@@ -5,8 +5,10 @@ import ClimateApi from "../../components/ClimateApi";
 import ClimateMigrationFact from "./ClimateMigrationFacts";
 import ClimateMigrationSubmit from "./ClimateMigrationSubmit";
 import { GiPositionMarker } from "react-icons/gi";
-import "./ClimateMigration.css";
+import "./../../App.css";
 import "../../scss/custom.scss";
+import "./ClimateMigration.css";
+
 // import axios from 'axios'
 // import {FaMapMarkerAlt} from 'react-icons/fa';
 // import StoryModal from "../../components/StoryModal";
@@ -78,11 +80,17 @@ function ClimateMigrationMap() {
       <div>
           {renderMap ? (
             <div>
-              {renderMap || renderSubmit ?
-                <Button variant="success" onClick={toggleButton}>Background</Button>
-               : <Button variant="success" onClick={toggleButton}>not working</Button>
-              }
-              <Button variant="success" onClick={toggleSubmit}>Submit your story</Button>
+              <div className="redirect-buttons">
+                <div className="redirect-btn1">
+                  {renderMap || renderSubmit ?
+                    <Button variant="success" onClick={toggleButton}>Background</Button>
+                  : <Button variant="success" onClick={toggleButton}>not working</Button>
+                  }
+                </div>
+                <div className="redirect-btn2">
+                  <Button variant="success" onClick={toggleSubmit}>Submit your story</Button>
+                </div>
+              </div>
               <div>
 
                 {/* -------------- Select Region to be filtered -------------- */}
@@ -156,12 +164,17 @@ function ClimateMigrationMap() {
                         />
                       </div>
                       <Modal style={{ fontFamily: 'Titillium Web' }} show={show} fullscreen={fullscreen} onHide={() => setShow(false)}>
-                        <Modal.Header closeButton 
-                        className='bg-success text-primary'>
+                        <Modal.Header closeButton
+                          className='bg-success text-primary'>
                           <Modal.Title>{selectedPost.title}</Modal.Title>
                         </Modal.Header>
                         <Modal.Body 
-                          className='text-success-bold'>{selectedPost.story}</Modal.Body>
+                          className='text-success'>{selectedPost.story}
+                        </Modal.Body>
+                        <Modal.Footer
+                          className='bg-success text-primary'>
+                          {selectedPost.nickname}
+                        </Modal.Footer>
                       </Modal>
                     </Popup>
                   ) : null}

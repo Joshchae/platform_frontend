@@ -6,16 +6,23 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  /* box-sizing: border-box; */
+  box-sizing: inherit;
 }
 
 #page-container {
   position: relative;
-  min-height: 100vh;
+  /* min-height: 100vh; */
 }
 
 #content-wrap {
   padding-bottom: 2.5rem; /*Footer heigth*/
+}
+
+.wrapper {
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
 }
 
 .App {
@@ -35,6 +42,16 @@
   justify-content: flex-start; */
   font-family: "Titillium Web", sans-serif;
   color: #00303f;
+}
+
+.redirect-buttons {
+  display: flex;
+  flex-direction: row;
+  padding-bottom: 2rem;
+}
+
+.redirect-btn1 {
+  margin-right: 0.8rem;
 }
 
 /* .App-logo {

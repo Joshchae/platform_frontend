@@ -5,7 +5,7 @@ import "./index.css";
 import Header from "./components/header/Header";
 import Home from "./pages/home/Home";
 import About from "./pages/about/About";
-// import Footer from "./components/footer/Footer";
+import Footer from "./components/footer/Footer";
 
 // import ConflictHome from "./pages/conflict/ConflictHome";
 import ConflictHome2 from "./pages/conflict/ConflictHome2";
@@ -26,7 +26,7 @@ import "./scss/custom.scss";
 function App() {
   return (
     <div className="App">
-      <div>
+      <div className="wrapper">
      {/* <Logo /> */}
       <Header />
       <main>
@@ -72,7 +72,7 @@ function App() {
           </Switch>
         </main>
       </div>
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 }

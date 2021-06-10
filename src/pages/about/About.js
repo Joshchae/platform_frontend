@@ -4,7 +4,7 @@ import './About.css'
 import { IoLogoLinkedin } from 'react-icons/io';
 import { IoLogoGithub } from 'react-icons/io';
 import { Card, CardDeck } from 'react-bootstrap';
-import Footer from "./../../components/footer/Footer";
+// import Footer from "./../../components/footer/Footer";
 
 function About() {
     const history = useHistory();
@@ -93,7 +93,7 @@ function About() {
             <div>
                 <br />
             </div>
-            <Footer/>
+            {/* <Footer/> */}
         </div>
     );
  
