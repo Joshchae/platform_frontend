@@ -6,6 +6,7 @@ import ClimateMigrationFact from "./ClimateMigrationFacts";
 import ClimateMigrationSubmit from "./ClimateMigrationSubmit";
 import { GiPositionMarker } from "react-icons/gi";
 import "./ClimateMigration.css";
+import "../../scss/custom.scss";
 // import axios from 'axios'
 // import {FaMapMarkerAlt} from 'react-icons/fa';
 // import StoryModal from "../../components/StoryModal";
@@ -108,6 +109,7 @@ function ClimateMigrationMap() {
                       latitude={selectedPost.location.latitude}
                       longitude={selectedPost.location.longitude}
                       closeButton={false}
+                   
                       // closeOnClick={false}
                       // onClose={() => {
                       //   setSelectedPost(null);
@@ -119,7 +121,7 @@ function ClimateMigrationMap() {
                         <h6>{selectedPost.country}</h6>
                         <h6>{selectedPost.locationName}</h6>
                         <p>{selectedPost.story.substr(0, 50)}...</p>
-                        <Button className="me-2" onClick={handleShow}>
+                        <Button className="me-2 bg-success text-primary" onClick={handleShow} >
                           Explore more
                         </Button>
                         <br />
@@ -129,11 +131,13 @@ function ClimateMigrationMap() {
                           alt={selectedPost.title}
                         />
                       </div>
-                      <Modal show={show} fullscreen={fullscreen} onHide={() => setShow(false)}>
-                        <Modal.Header closeButton>
+                      <Modal style={{ fontFamily: 'Titillium Web', closeButton: '#f5f4f4'  }} show={show} fullscreen={fullscreen} onHide={() => setShow(false)}>
+                        <Modal.Header closeButton 
+                        className='bg-success text-primary'>
                           <Modal.Title>{selectedPost.title}</Modal.Title>
                         </Modal.Header>
-                        <Modal.Body>{selectedPost.story}</Modal.Body>
+                        <Modal.Body 
+                          className='text-success'>{selectedPost.story}</Modal.Body>
                       </Modal>
                     </Popup>
                   ) : null}
@@ -165,6 +169,8 @@ function ClimateMigrationMap() {
 }
 
 export default ClimateMigrationMap;
+
+
 
 // fetching data
 // useEffect(() => {

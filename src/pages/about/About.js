@@ -51,9 +51,6 @@ function About() {
                     <h5>
                     The platform intends to provide an impetus for marginalised voices to be included in discussions on climate-induced human mobility. Users can explore the interactive map that entails individual migration stories submitted by people that are affected by the adverse effects of climate change. 
                     </h5>
-                    <h5>
-                    The conflicts part of this platform …
-                    </h5>
                 </div>
                 <div>
                     <div className='about-box'>
