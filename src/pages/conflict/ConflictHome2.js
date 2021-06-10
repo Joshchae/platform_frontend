@@ -6,7 +6,7 @@ import ControlledTabs from './ControlledTabs';
 function ConflictHome2() {
 
     return (
-      <div>
+      <div className='conflictmap'>
         <ControlledTabs />
       </div>
     );

@@ -28,14 +28,20 @@ circle {
 }
  */
 
+.path.rsm-graticule {
+  width: 960;
+  height: 550;
+}
 
- .path.rsm-graticule {
-     width: 960;
-     height: 550;
- }
+.ControlledTabs {
+  display: flex;
+  /* align-items: center; */
+  position: top;
+}
 
- .ControlledTabs {
-     display: flex;
-     /* align-items: center; */
-     position: top;
- }
+/* .conflictmap {
+  height: 150vh;
+} */
+
+.conflict-tabs {
+}

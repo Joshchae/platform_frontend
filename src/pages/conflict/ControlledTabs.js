@@ -31,7 +31,7 @@ function ControlledTabs() {
           </Tab>
           <Tab eventKey="scatterplot" title="Scatterplot Map">
             <div>
-            <Scatterplot />
+             <Scatterplot />
             </div>
           </Tab>
         </Tabs>
