@@ -1,3 +1,8 @@
 /api/* https://climate-migration-stories.herokuapp.com/:splat 200
 /* /index.html 200
 
+/about /About
+/ClimateMigration/Map /ClimateMigration/Map
+/ClimateMigration/Facts /ClimateMigration/Facts
+/ClimateMigration/ /ClimateMigration/Map
+/Conflict /Conflict
