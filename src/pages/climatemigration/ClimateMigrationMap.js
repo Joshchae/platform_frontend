@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
-import ReactMapGL, { Marker, Popup, NavigationControl } from "react-map-gl";
+import ReactMapGL, { Marker, Popup } from "react-map-gl";
+//NavigationControl
 import { Button, Modal } from "react-bootstrap";
 import ClimateApi from "../../components/ClimateApi";
 import ClimateMigrationFact from "./ClimateMigrationFacts";
@@ -13,7 +14,7 @@ import "./ClimateMigration.css";
 // import {FaMapMarkerAlt} from 'react-icons/fa';
 // import StoryModal from "../../components/StoryModal";
 
-const navControlStyle = { right: 10, top: 10 };
+// const navControlStyle = { right: 10, top: 10 };
 
 function ClimateMigrationMap() {
   const [viewport, setViewport] = useState({
@@ -112,7 +113,7 @@ function ClimateMigrationMap() {
                   // old: mapbox://styles/zuzuc/ckp5g7i5g04yy17l8viaxmxgi'
                   onViewportChange={(viewport) => setViewport(viewport)}
                 >
-                  <NavigationControl style={navControlStyle} />
+                  {/* <NavigationControl style={navControlStyle} /> */}
                   {postData.map((post) => (
                     <Marker
                       key={post._id}

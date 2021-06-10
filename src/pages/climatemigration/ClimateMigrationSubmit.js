@@ -36,7 +36,7 @@ function ClimateMigrationSubmit({ toggleSubmit, SubmitToast }) {
   // };
   /* ------------------------- end of Without FORMIK ----------------------------*/
   const [show, setShow] = useState(false);
-  const postUrl = "https://climate-migration-stories.herokuapp.com/posts";
+  const postUrl = "/api/posts";
   const handleSubmit2 = ({ values }) => {
     // e.preventDefault();
     axios
